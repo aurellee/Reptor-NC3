@@ -38,6 +38,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		219B6DD32C4162C100D78148 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */,
+				81A7B6A42C3FE4750060A23E /* ContentView.swift */,
+				21F195282C413062009BDF5E /* RMProgress.swift */,
+				21F1952D2C416204009BDF5E /* RMCalculator.swift */,
+				9AAF45AC2C41278F00B0110E /* History.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		219B6DD42C4162CF00D78148 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		219B6DD52C4162D300D78148 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		81A7B6962C3FE4740060A23E = {
 			isa = PBXGroup;
 			children = (
@@ -57,11 +83,9 @@
 		81A7B6A12C3FE4740060A23E /* Reptor-NC3 */ = {
 			isa = PBXGroup;
 			children = (
-				81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */,
-				81A7B6A42C3FE4750060A23E /* ContentView.swift */,
-				21F195282C413062009BDF5E /* RMProgress.swift */,
-				21F1952D2C416204009BDF5E /* RMCalculator.swift */,
-				9AAF45AC2C41278F00B0110E /* History.swift */,
+				219B6DD32C4162C100D78148 /* Views */,
+				219B6DD42C4162CF00D78148 /* Models */,
+				219B6DD52C4162D300D78148 /* ViewModels */,
 				81A7B6A62C3FE4760060A23E /* Assets.xcassets */,
 				81A7B6A82C3FE4760060A23E /* Preview Content */,
 			);
