@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Reptor-NC3
-//
-//  Created by Jaqueline Aurelia Langi on 11/07/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
