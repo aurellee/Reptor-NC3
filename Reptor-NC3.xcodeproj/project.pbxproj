@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21F195292C413062009BDF5E /* RMProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F195282C413062009BDF5E /* RMProgress.swift */; };
+		21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F1952D2C416204009BDF5E /* RMCalculator.swift */; };
 		81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */; };
 		81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A42C3FE4750060A23E /* ContentView.swift */; };
 		81A7B6A72C3FE4760060A23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A7B6A62C3FE4760060A23E /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		21F195282C413062009BDF5E /* RMProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMProgress.swift; sourceTree = "<group>"; };
+		21F1952D2C416204009BDF5E /* RMCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCalculator.swift; sourceTree = "<group>"; };
 		81A7B69F2C3FE4740060A23E /* Reptor-NC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reptor-NC3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reptor_NC3App.swift; sourceTree = "<group>"; };
 		81A7B6A42C3FE4750060A23E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */,
 				81A7B6A42C3FE4750060A23E /* ContentView.swift */,
 				21F195282C413062009BDF5E /* RMProgress.swift */,
+				21F1952D2C416204009BDF5E /* RMCalculator.swift */,
 				9AAF45AC2C41278F00B0110E /* History.swift */,
 				81A7B6A62C3FE4760060A23E /* Assets.xcassets */,
 				81A7B6A82C3FE4760060A23E /* Preview Content */,
@@ -146,6 +149,7 @@
 				9AAF45AD2C41278F00B0110E /* History.swift in Sources */,
 				81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */,
 				81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */,
+				21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */,
 				21F195292C413062009BDF5E /* RMProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
