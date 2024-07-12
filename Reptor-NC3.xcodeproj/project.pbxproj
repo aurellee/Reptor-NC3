@@ -11,6 +11,7 @@
 		81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A42C3FE4750060A23E /* ContentView.swift */; };
 		81A7B6A72C3FE4760060A23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A7B6A62C3FE4760060A23E /* Assets.xcassets */; };
 		81A7B6AA2C3FE4760060A23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A7B6A92C3FE4760060A23E /* Preview Assets.xcassets */; };
+		9AAF45AD2C41278F00B0110E /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF45AC2C41278F00B0110E /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		81A7B6A42C3FE4750060A23E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81A7B6A62C3FE4760060A23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81A7B6A92C3FE4760060A23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9AAF45AC2C41278F00B0110E /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */,
 				81A7B6A42C3FE4750060A23E /* ContentView.swift */,
+				9AAF45AC2C41278F00B0110E /* History.swift */,
 				81A7B6A62C3FE4760060A23E /* Assets.xcassets */,
 				81A7B6A82C3FE4760060A23E /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AAF45AD2C41278F00B0110E /* History.swift in Sources */,
 				81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */,
 				81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */,
 			);
