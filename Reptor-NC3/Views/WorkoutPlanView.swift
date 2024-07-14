@@ -6,7 +6,7 @@ struct WorkoutPlanView: View {
     let reps: Int = 12
     let oneRepMax: Int = 140
     
-    @State var isAllTapped = false
+    @State var isAllTapped = true
     @State var isStrengthTapped = false
     @State var isHypertrophyTapped = false
     @State var isEnduranceTapped = false
@@ -18,10 +18,10 @@ struct WorkoutPlanView: View {
                     ScrollView(.horizontal){
                         HStack(spacing: 10){
                             Text("All")
-                                .foregroundStyle(Color.boldRed)
+                                .foregroundStyle(isAllTapped ? Color.boldRed : Color.secondary)
                                 .padding(.vertical, 7)
                                 .padding(.horizontal, 14)
-                                .background(Color.lightRed)
+                                .background(isAllTapped ? Color.lightRed : Color(red: 0.96, green: 0.96, blue: 0.96))
                                 .cornerRadius(19)
                                 .onTapGesture {
                                     isAllTapped = true
@@ -31,10 +31,10 @@ struct WorkoutPlanView: View {
                                 }
                                 .padding(.leading, 16)
                             Text("Strength")
-                                .foregroundStyle(Color.secondary)
+                                .foregroundStyle(isStrengthTapped ? Color.boldRed : Color.secondary)
                                 .padding(.vertical, 7)
                                 .padding(.horizontal, 14)
-                                .background(Color(red: 0.96, green: 0.96, blue: 0.96))
+                                .background(isStrengthTapped ? Color.lightRed : Color(red: 0.96, green: 0.96, blue: 0.96))
                                 .cornerRadius(19)
                                 .onTapGesture {
                                     isAllTapped = false
@@ -43,10 +43,10 @@ struct WorkoutPlanView: View {
                                     isEnduranceTapped = false
                                 }
                             Text("Hypertrophy")
-                                .foregroundStyle(Color.secondary)
+                                .foregroundStyle(isHypertrophyTapped ? Color.boldRed : Color.secondary)
                                 .padding(.vertical, 7)
                                 .padding(.horizontal, 14)
-                                .background(Color(red: 0.96, green: 0.96, blue: 0.96))
+                                .background(isHypertrophyTapped ? Color.lightRed : Color(red: 0.96, green: 0.96, blue: 0.96))
                                 .cornerRadius(19)
                                 .onTapGesture {
                                     isAllTapped = false
@@ -55,10 +55,10 @@ struct WorkoutPlanView: View {
                                     isEnduranceTapped = false
                                 }
                             Text("Endurance")
-                                .foregroundStyle(Color.secondary)
+                                .foregroundStyle(isEnduranceTapped ? Color.boldRed : Color.secondary)
                                 .padding(.vertical, 7)
                                 .padding(.horizontal, 14)
-                                .background(Color(red: 0.96, green: 0.96, blue: 0.96))
+                                .background(isEnduranceTapped ? Color.lightRed : Color(red: 0.96, green: 0.96, blue: 0.96))
                                 .cornerRadius(19)
                                 .onTapGesture {
                                     isAllTapped = false
