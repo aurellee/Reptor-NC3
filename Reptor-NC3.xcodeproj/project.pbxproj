@@ -52,9 +52,9 @@
 				81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */,
 				81A7B6A42C3FE4750060A23E /* ContentView.swift */,
 				219B6DD62C43E27000D78148 /* WorkoutPlanView.swift */,
-				219B6DDC2C44342100D78148 /* EndurancePlanView.swift */,
-				219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */,
 				219B6DD82C4433F200D78148 /* StrengthPlanView.swift */,
+				219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */,
+				219B6DDC2C44342100D78148 /* EndurancePlanView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
