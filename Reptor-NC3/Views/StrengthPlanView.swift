@@ -39,7 +39,7 @@ struct StrengthPlanView: View {
                 
                 // Estimated Rep Maxes
                 HStack{
-                    Text("Estimated Rep Maxes")
+                    Text("Recommended Weights")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .padding(.leading, 15)
