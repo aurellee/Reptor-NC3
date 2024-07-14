@@ -6,23 +6,13 @@ struct WorkoutPlanView: View {
     let reps: Int = 12
     let oneRepMax: Int = 140
     
-    @State var isAllTapped = true
+    @State var isAllTapped = false
     @State var isStrengthTapped = false
     @State var isHypertrophyTapped = false
     @State var isEnduranceTapped = false
     
     var body: some View {
         NavigationStack {
-            if isStrengthTapped {
-                StrengthPlanView()
-            }
-            else if isHypertrophyTapped {
-                HypertrophyPlanView()
-            }
-            else if isEnduranceTapped {
-                EndurancePlanView()
-            }
-            else {
                 VStack {
                     // Category
                     ScrollView(.horizontal){
@@ -33,6 +23,12 @@ struct WorkoutPlanView: View {
                                 .padding(.horizontal, 14)
                                 .background(Color.lightRed)
                                 .cornerRadius(19)
+                                .onTapGesture {
+                                    isAllTapped = true
+                                    isStrengthTapped = false
+                                    isHypertrophyTapped = false
+                                    isEnduranceTapped = false
+                                }
                                 .padding(.leading, 16)
                             Text("Strength")
                                 .foregroundStyle(Color.secondary)
@@ -41,7 +37,10 @@ struct WorkoutPlanView: View {
                                 .background(Color(red: 0.96, green: 0.96, blue: 0.96))
                                 .cornerRadius(19)
                                 .onTapGesture {
+                                    isAllTapped = false
                                     isStrengthTapped = true
+                                    isHypertrophyTapped = false
+                                    isEnduranceTapped = false
                                 }
                             Text("Hypertrophy")
                                 .foregroundStyle(Color.secondary)
@@ -50,7 +49,10 @@ struct WorkoutPlanView: View {
                                 .background(Color(red: 0.96, green: 0.96, blue: 0.96))
                                 .cornerRadius(19)
                                 .onTapGesture {
+                                    isAllTapped = false
+                                    isStrengthTapped = false
                                     isHypertrophyTapped = true
+                                    isEnduranceTapped = false
                                 }
                             Text("Endurance")
                                 .foregroundStyle(Color.secondary)
@@ -59,12 +61,26 @@ struct WorkoutPlanView: View {
                                 .background(Color(red: 0.96, green: 0.96, blue: 0.96))
                                 .cornerRadius(19)
                                 .onTapGesture {
+                                    isAllTapped = false
+                                    isStrengthTapped = false
+                                    isHypertrophyTapped = false
                                     isEnduranceTapped = true
                                 }
                                 .padding(.trailing, 16)
                         }
                     }
                     .padding(.bottom)
+                    
+                    if isStrengthTapped {
+                        StrengthPlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
+                    }
+                    else if isHypertrophyTapped {
+                        HypertrophyPlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
+                    }
+                    else if isEnduranceTapped {
+                        EndurancePlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
+                    }
+                    else {
                     
                     // Estimated Rep Maxes
                     HStack{
@@ -109,8 +125,8 @@ struct WorkoutPlanView: View {
                     //                Text("1RM: \(oneRepMax) kg")
                     //                Spacer()
                 }
-                .navigationBarTitle(Text("Workout Plan").font(.largeTitle), displayMode: .inline)
             }
+            .navigationBarTitle(Text("Workout Plan").font(.largeTitle), displayMode: .inline)
         }
     }
 }
