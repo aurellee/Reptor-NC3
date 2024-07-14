@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		219B6DD72C43E27000D78148 /* WorkoutPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DD62C43E27000D78148 /* WorkoutPlanView.swift */; };
+		219B6DD92C4433F200D78148 /* StrengthPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DD82C4433F200D78148 /* StrengthPlanView.swift */; };
+		219B6DDB2C44341000D78148 /* HypertrophyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */; };
+		219B6DDD2C44342100D78148 /* EndurancePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DDC2C44342100D78148 /* EndurancePlanView.swift */; };
 		21F195292C413062009BDF5E /* RMProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F195282C413062009BDF5E /* RMProgress.swift */; };
 		21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F1952D2C416204009BDF5E /* RMCalculator.swift */; };
 		81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		219B6DD62C43E27000D78148 /* WorkoutPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanView.swift; sourceTree = "<group>"; };
+		219B6DD82C4433F200D78148 /* StrengthPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthPlanView.swift; sourceTree = "<group>"; };
+		219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertrophyPlanView.swift; sourceTree = "<group>"; };
+		219B6DDC2C44342100D78148 /* EndurancePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndurancePlanView.swift; sourceTree = "<group>"; };
 		21F195282C413062009BDF5E /* RMProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMProgress.swift; sourceTree = "<group>"; };
 		21F1952D2C416204009BDF5E /* RMCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCalculator.swift; sourceTree = "<group>"; };
 		81A7B69F2C3FE4740060A23E /* Reptor-NC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reptor-NC3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +52,9 @@
 				81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */,
 				81A7B6A42C3FE4750060A23E /* ContentView.swift */,
 				219B6DD62C43E27000D78148 /* WorkoutPlanView.swift */,
+				219B6DDC2C44342100D78148 /* EndurancePlanView.swift */,
+				219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */,
+				219B6DD82C4433F200D78148 /* StrengthPlanView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,12 +182,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219B6DDD2C44342100D78148 /* EndurancePlanView.swift in Sources */,
+				219B6DDB2C44341000D78148 /* HypertrophyPlanView.swift in Sources */,
 				9AAF45AD2C41278F00B0110E /* History.swift in Sources */,
 				219B6DD72C43E27000D78148 /* WorkoutPlanView.swift in Sources */,
 				81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */,
 				81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */,
 				21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */,
 				21F195292C413062009BDF5E /* RMProgress.swift in Sources */,
+				219B6DD92C4433F200D78148 /* StrengthPlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
