@@ -31,11 +31,11 @@ struct StrengthPlanView: View {
                     Spacer()
                 }
             }
+            .navigationBarTitle(Text("Workout Plan").font(.largeTitle), displayMode: .inline)
         }
-        .navigationBarTitle(Text("Workout Plan").font(.largeTitle), displayMode: .inline)
     }
 }
 
-//#Preview {
-//    StrengthPlanView(isAllTapped: $isAllTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
-//}
+#Preview {
+    StrengthPlanView(isAllTapped: .constant(false), isStrengthTapped: .constant(true), isHypertrophyTapped: .constant(false), isEnduranceTapped: .constant(false))
+}

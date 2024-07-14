@@ -36,6 +36,6 @@ struct HypertrophyPlanView: View {
     }
 }
 
-//#Preview {
-//    HypertrophyPlanView()
-//}
+#Preview {
+    HypertrophyPlanView(isAllTapped: .constant(false), isStrengthTapped: .constant(false), isHypertrophyTapped: .constant(true), isEnduranceTapped: .constant(false))
+}

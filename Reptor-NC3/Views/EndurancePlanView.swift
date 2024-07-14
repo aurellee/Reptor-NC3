@@ -36,6 +36,6 @@ struct EndurancePlanView: View {
     }
 }
 
-//#Preview {
-//    EndurancePlanView()
-//}
+#Preview {
+    EndurancePlanView(isAllTapped: .constant(false), isStrengthTapped: .constant(false), isHypertrophyTapped: .constant(false), isEnduranceTapped: .constant(true))
+}
