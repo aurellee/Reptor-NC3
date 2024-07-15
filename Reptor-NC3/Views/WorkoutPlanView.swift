@@ -20,7 +20,7 @@ struct WorkoutPlanView: View {
                         .foregroundStyle(isAllTapped ? Color.boldRed : Color.secondary)
                         .padding(.vertical, 7)
                         .padding(.horizontal, 14)
-                        .background(isAllTapped ? Color.lightRed : Color.whiteBlack)
+                        .background(isAllTapped ? Color.lightRed : Color.secondaryBackground)
                         .cornerRadius(19)
                         .onTapGesture {
                             isAllTapped = true
@@ -33,7 +33,7 @@ struct WorkoutPlanView: View {
                         .foregroundStyle(isStrengthTapped ? Color.boldRed : Color.secondary)
                         .padding(.vertical, 7)
                         .padding(.horizontal, 14)
-                        .background(isStrengthTapped ? Color.lightRed : Color.whiteBlack)
+                        .background(isStrengthTapped ? Color.lightRed : Color.secondaryBackground)
                         .cornerRadius(19)
                         .onTapGesture {
                             isAllTapped = false
@@ -45,7 +45,7 @@ struct WorkoutPlanView: View {
                         .foregroundStyle(isHypertrophyTapped ? Color.boldRed : Color.secondary)
                         .padding(.vertical, 7)
                         .padding(.horizontal, 14)
-                        .background(isHypertrophyTapped ? Color.lightRed : Color.whiteBlack)
+                        .background(isHypertrophyTapped ? Color.lightRed : Color.secondaryBackground)
                         .cornerRadius(19)
                         .onTapGesture {
                             isAllTapped = false
@@ -57,7 +57,7 @@ struct WorkoutPlanView: View {
                         .foregroundStyle(isEnduranceTapped ? Color.boldRed : Color.secondary)
                         .padding(.vertical, 7)
                         .padding(.horizontal, 14)
-                        .background(isEnduranceTapped ? Color.lightRed : Color.whiteBlack)
+                        .background(isEnduranceTapped ? Color.lightRed : Color.secondaryBackground)
                         .cornerRadius(19)
                         .onTapGesture {
                             isAllTapped = false
