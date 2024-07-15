@@ -12,6 +12,7 @@
 		219B6DDB2C44341000D78148 /* HypertrophyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */; };
 		219B6DDD2C44342100D78148 /* EndurancePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DDC2C44342100D78148 /* EndurancePlanView.swift */; };
 		219B6DDF2C44F4FC00D78148 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DDE2C44F4FC00D78148 /* TabBarView.swift */; };
+		219B6DE12C4502C500D78148 /* WorkoutPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DE02C4502C500D78148 /* WorkoutPlanViewModel.swift */; };
 		21F195292C413062009BDF5E /* RMProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F195282C413062009BDF5E /* RMProgress.swift */; };
 		21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F1952D2C416204009BDF5E /* RMCalculator.swift */; };
 		81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */; };
@@ -27,6 +28,7 @@
 		219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertrophyPlanView.swift; sourceTree = "<group>"; };
 		219B6DDC2C44342100D78148 /* EndurancePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndurancePlanView.swift; sourceTree = "<group>"; };
 		219B6DDE2C44F4FC00D78148 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		219B6DE02C4502C500D78148 /* WorkoutPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanViewModel.swift; sourceTree = "<group>"; };
 		21F195282C413062009BDF5E /* RMProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMProgress.swift; sourceTree = "<group>"; };
 		21F1952D2C416204009BDF5E /* RMCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCalculator.swift; sourceTree = "<group>"; };
 		81A7B69F2C3FE4740060A23E /* Reptor-NC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reptor-NC3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				21F1952D2C416204009BDF5E /* RMCalculator.swift */,
+				219B6DE02C4502C500D78148 /* WorkoutPlanViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */,
 				21F195292C413062009BDF5E /* RMProgress.swift in Sources */,
 				219B6DDF2C44F4FC00D78148 /* TabBarView.swift in Sources */,
+				219B6DE12C4502C500D78148 /* WorkoutPlanViewModel.swift in Sources */,
 				219B6DD92C4433F200D78148 /* StrengthPlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
