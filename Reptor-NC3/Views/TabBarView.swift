@@ -8,7 +8,7 @@ struct TabBarView: View {
             NavigationStack() {
                 WorkoutPlanView()
                     .navigationTitle("Workout Plan")
-//                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarTitleDisplayMode(.inline)
             }
             .tabItem {
                 // Calculator Tab
