@@ -81,50 +81,52 @@ struct WorkoutPlanView: View {
                         EndurancePlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
                     }
                     else {
-                    
-                    // Estimated Rep Maxes
-                    HStack{
-                        Text("Estimated Rep Maxes")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            .padding(.leading, 15)
-                        Spacer()
-                    }
-                    
-                    // Workout Plan Sheet
-                    List {
-                        ForEach(1..<13) { item in
-                            HStack(){
-                                Text("\(item) Reps")
-                                    .padding(.leading)
+                        VStack{
+                            // Estimated Rep Maxes
+                            HStack{
+                                Text("Estimated Rep Maxes")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                    .padding(.leading, 15)
                                 Spacer()
-                                Text("\(144 - item*4) kg")
-                                Spacer()
-                                Text("\(103 - item*3)%")
-                                    .padding(.trailing)
                             }
-                            .listRowInsets(EdgeInsets())
+                            
+                            // Workout Plan Sheet
+                            List {
+                                ForEach(1..<13) { item in
+                                    HStack(){
+                                        Text("\(item) Reps")
+                                            .padding(.leading)
+                                        Spacer()
+                                        Text("\(144 - item*4) kg")
+                                        Spacer()
+                                        Text("\(103 - item*3)%")
+                                            .padding(.trailing)
+                                    }
+                                    .listRowInsets(EdgeInsets())
+                                }
+                            }
+                            .listStyle(.plain)
+                            
+                            // Save History Button
+                            Text("Save History")
+                                .foregroundStyle(Color.white)
+                                .padding(.vertical, 14)
+                                .padding(.horizontal, 40)
+                                .background(Color.boldRed)
+                                .cornerRadius(19)
+                            
+                            Spacer()
+                            
+                            //                // Placeholder variables content
+                            //                Text("Exercise: \(exercise)")
+                            //                Text("Weight: \(weight) kg")
+                            //                Text("Reps: \(reps)")
+                            //                Text("1RM: \(oneRepMax) kg")
+                            //                Spacer()
                         }
+                        .padding(.horizontal)
                     }
-                    .listStyle(.plain)
-                    
-                    // Save History Button
-                    Text("Save History")
-                        .foregroundStyle(Color.white)
-                        .padding(.vertical, 14)
-                        .padding(.horizontal, 40)
-                        .background(Color.boldRed)
-                        .cornerRadius(19)
-                    
-                    Spacer()
-                    
-                    //                // Placeholder variables content
-                    //                Text("Exercise: \(exercise)")
-                    //                Text("Weight: \(weight) kg")
-                    //                Text("Reps: \(reps)")
-                    //                Text("1RM: \(oneRepMax) kg")
-                    //                Spacer()
-                }
             }
             .navigationBarTitle(Text("Workout Plan").font(.largeTitle), displayMode: .inline)
         }
