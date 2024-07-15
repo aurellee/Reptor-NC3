@@ -7,13 +7,11 @@ struct TabBarView: View {
         TabView(selection: $selectedIndex) {
             NavigationStack() {
                 ContentView()
-                    .navigationTitle("Calculcator")
+                    .navigationTitle("Calculator")
             }
             .tabItem {
                 // Calculator Tab
-                Text("Calculator")
-                Image(systemName: "star.fill")
-                    .renderingMode(.template)
+                Label("Calculator", systemImage: "star.fill")
             }
             .tag(0)
             
@@ -22,8 +20,8 @@ struct TabBarView: View {
                     .navigationTitle("History")
             }
             .tabItem {
+                // History Tab
                 Label("History", systemImage: "clock.arrow.circlepath")
-                    .foregroundStyle(Color.boldRed)
             }
             .tag(1)
         }
