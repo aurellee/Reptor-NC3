@@ -6,8 +6,9 @@ struct TabBarView: View {
     var body: some View {
         TabView(selection: $selectedIndex) {
             NavigationStack() {
-                ContentView()
-                    .navigationTitle("Calculator")
+                WorkoutPlanView()
+                    .navigationTitle("Workout Plan")
+//                    .navigationBarTitleDisplayMode(.inline)
             }
             .tabItem {
                 // Calculator Tab
@@ -16,7 +17,7 @@ struct TabBarView: View {
             .tag(0)
             
             NavigationStack() {
-                WorkoutPlanView()
+                ContentView()
                     .navigationTitle("History")
             }
             .tabItem {
