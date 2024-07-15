@@ -105,6 +105,7 @@ struct EndurancePlanView: View {
                         Spacer()
                 }
             }
+            .padding()
             .navigationBarTitle(Text("Workout Plan").font(.largeTitle), displayMode: .inline)
         }
     }
