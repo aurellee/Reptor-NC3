@@ -82,8 +82,8 @@ struct CalculatorView: View {
                     NavigationLink(
                         destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax)
                             .onAppear {
-                              modelContext.insert(RMData(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date))
-                              try? modelContext.save()
+//                                modelContext.insert(RMData(id: UUID(), weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date))
+//                              try? modelContext.save()
                             }
                     ) {
                         Text("See Workout Plan")
