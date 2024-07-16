@@ -3,6 +3,7 @@ import SwiftData
 
 struct WorkoutPlanView: View {
     @Environment(\.modelContext) var modelContext
+    @StateObject private var workoutPlanViewModel = WorkoutPlanViewModel()
     
     let exercise: String
     let weight: String
@@ -75,13 +76,13 @@ struct WorkoutPlanView: View {
             .padding(.bottom)
             VStack{
                 if isStrengthTapped {
-                    StrengthPlanView()
+                    StrengthPlanView(oneRepMax: oneRepMax)
                 }
                 else if isHypertrophyTapped {
-                    HypertrophyPlanView()
+                    HypertrophyPlanView(oneRepMax: oneRepMax)
                 }
                 else if isEnduranceTapped {
-                    EndurancePlanView()
+                    EndurancePlanView(oneRepMax: oneRepMax)
                 }
                 else {
                     // Estimated Rep Maxes
@@ -131,6 +132,5 @@ struct WorkoutPlanView: View {
 }
 
 #Preview {
-     WorkoutPlanView(exercise: "Weightlift", weight: "30.0", reps: "30", oneRepMax: "10")
-//    WorkoutPlanView()
+     WorkoutPlanView(exercise: "Weightlift", weight: "30.0", reps: "30", oneRepMax: "120")
 }
