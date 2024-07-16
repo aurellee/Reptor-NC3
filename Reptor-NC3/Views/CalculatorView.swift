@@ -76,7 +76,8 @@ struct CalculatorView: View {
                 .padding(.horizontal)
                 
                 NavigationLink(
-                    destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax)
+//                    destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax)
+                    destination: WorkoutPlanView()
                         .onAppear {
                             viewModel.saveExercise()
                         }
