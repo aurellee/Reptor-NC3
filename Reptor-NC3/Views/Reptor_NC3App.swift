@@ -6,6 +6,6 @@ struct Reptor_NC3App: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Exercise.self)
+        .modelContainer(for: RMData.self)
     }
 }

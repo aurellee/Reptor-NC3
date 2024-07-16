@@ -9,22 +9,31 @@ import SwiftUI
 import SwiftData
 
 struct HistoryView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var exercises: [Exercise]
-
+//    @ObservedObject private var viewModel = RMCalculator()
+    @Environment(\.modelContext) var modelContext
+    @Query var rmData: [RMData]
+    
     var body: some View {
-        VStack {
-            List(exercises) { exercise in
-                VStack(alignment: .leading) {
-                    Text("Exercise: \(exercise.exercise)")
-                    Text("Weight: \(exercise.weight) kg")
-                    Text("Reps: \(exercise.reps)")
-                    Text("1RM: \(exercise.oneRepMax) kg")
-                    Text("Date: \(formatDate(exercise.date))")
+        NavigationView {
+            VStack {
+                List{
+                    ForEach(rmData) { data in
+                        VStack(alignment: .leading) {
+                            Text("Exercise: \(data.exercise)")
+                            Text("Weight: \(data.weight) kg")
+                            Text("Reps: \(data.reps)")
+                            Text("1RM: \(data.oneRepMax) kg")
+                        }
+                        .padding()
+                    }
+                    .onDelete(perform: { indexes in
+                        for index in indexes {
+                            modelContext.delete(rmData[index])
+                        }
+                    })
                 }
-                .padding()
+                .navigationBarTitle("History")
             }
-            .navigationBarTitle("History", displayMode: .inline)
         }
     }
     

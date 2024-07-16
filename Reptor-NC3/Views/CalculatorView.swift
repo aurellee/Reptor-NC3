@@ -14,8 +14,8 @@ struct CalculatorView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack{
-                Color(UIColor.systemBackground)
+            ZStack {
+                Color.secondaryBackground
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
@@ -47,14 +47,14 @@ struct CalculatorView: View {
                         TextField("Weight", text: $viewModel.weight)
                             .keyboardType(.numberPad)
                             .padding()
-                            .background(Color.white)
+                            .background(Color.blackWhite)
                             .cornerRadius(8)
                             .shadow(radius: 1)
                         
                         TextField("Rep", text: $viewModel.reps)
                             .keyboardType(.numberPad)
                             .padding()
-                            .background(Color.white)
+                            .background(Color.blackWhite)
                             .cornerRadius(8)
                             .shadow(radius: 1)
                     }
@@ -72,7 +72,7 @@ struct CalculatorView: View {
                         .pickerStyle(MenuPickerStyle())
                     }
                     .padding()
-                    .background(Color.white)
+                    .background(Color.blackWhite)
                     .cornerRadius(8)
                     .shadow(radius: 1)
                     .padding(.horizontal)
@@ -81,7 +81,8 @@ struct CalculatorView: View {
                         destination: WorkoutPlanView()
                             .onAppear {
                                 saveExercise()
-                                print("")
+                              modelContext.insert(Exercise(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: Date()))
+                              try? modelContext.save()
                             }
                     ) {
                         Text("See Workout Plan")
@@ -101,13 +102,6 @@ struct CalculatorView: View {
                 }
             }
         }
-        
-    }
-    
-    private func saveExercise() {
-        let newExercise = Exercise(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: Date())
-        modelContext.insert(newExercise)
-        try? modelContext.save()
     }
 }
 
