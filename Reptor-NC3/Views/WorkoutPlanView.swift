@@ -21,12 +21,15 @@
 //}
       
 import SwiftUI
+import SwiftData
 
 struct WorkoutPlanView: View {
-        let exercise: String
-        let weight: String
-        let reps: String
-        let oneRepMax: String
+    @Environment(\.modelContext) var modelContext
+    
+    let exercise: String
+    let weight: String
+    let reps: String
+    let oneRepMax: String
     
     @State var isAllTapped = true
     @State var isStrengthTapped = false
