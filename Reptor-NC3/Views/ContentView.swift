@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     var body: some View {
@@ -17,11 +18,12 @@ struct ContentView: View {
         }
         .accentColor(Color(hex: "CC2F26"))
         .onAppear() {
-            UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().backgroundColor = .blackWhite
         }
     }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: RMData.self)
 }

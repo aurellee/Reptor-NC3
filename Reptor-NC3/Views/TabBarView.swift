@@ -6,7 +6,8 @@ struct TabBarView: View {
     var body: some View {
         TabView(selection: $selectedIndex) {
             NavigationStack() {
-                WorkoutPlanView()
+//                WorkoutPlanView()
+                WorkoutPlanView(exercise: "Weightlift", weight: "30.0", reps: "30", oneRepMax: "10")
                     .navigationTitle("Workout Plan")
                     .navigationBarTitleDisplayMode(.inline)
             }
