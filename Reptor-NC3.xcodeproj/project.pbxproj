@@ -11,22 +11,18 @@
 		219B6DD92C4433F200D78148 /* StrengthPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DD82C4433F200D78148 /* StrengthPlanView.swift */; };
 		219B6DDB2C44341000D78148 /* HypertrophyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */; };
 		219B6DDD2C44342100D78148 /* EndurancePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DDC2C44342100D78148 /* EndurancePlanView.swift */; };
-		219B6DDF2C44F4FC00D78148 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DDE2C44F4FC00D78148 /* TabBarView.swift */; };
 		219B6DE12C4502C500D78148 /* WorkoutPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DE02C4502C500D78148 /* WorkoutPlanViewModel.swift */; };
 		219B6DEF2C46113500D78148 /* RMData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DEE2C46113500D78148 /* RMData.swift */; };
 		219B6DF12C4650BB00D78148 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 219B6DF02C4650BB00D78148 /* Localizable.xcstrings */; };
-		21F195292C413062009BDF5E /* RMProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F195282C413062009BDF5E /* RMProgress.swift */; };
 		21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F1952D2C416204009BDF5E /* RMCalculator.swift */; };
-		8112A9BE2C416E1F0021EC20 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9BD2C416E1F0021EC20 /* Color.swift */; };
+		8112A9BE2C416E1F0021EC20 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9BD2C416E1F0021EC20 /* Color+Extension.swift */; };
 		8112A9C02C4401220021EC20 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9BF2C4401220021EC20 /* CalculatorView.swift */; };
 		8112A9C22C4401A60021EC20 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9C12C4401A60021EC20 /* HistoryView.swift */; };
 		8112A9C62C4404B50021EC20 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9C52C4404B50021EC20 /* Exercise.swift */; };
-		8112A9C92C44056F0021EC20 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9C82C44056F0021EC20 /* Storage.swift */; };
 		81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */; };
 		81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A42C3FE4750060A23E /* ContentView.swift */; };
 		81A7B6A72C3FE4760060A23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A7B6A62C3FE4760060A23E /* Assets.xcassets */; };
 		81A7B6AA2C3FE4760060A23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A7B6A92C3FE4760060A23E /* Preview Assets.xcassets */; };
-		9AAF45AD2C41278F00B0110E /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF45AC2C41278F00B0110E /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,23 +30,21 @@
 		219B6DD82C4433F200D78148 /* StrengthPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthPlanView.swift; sourceTree = "<group>"; };
 		219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertrophyPlanView.swift; sourceTree = "<group>"; };
 		219B6DDC2C44342100D78148 /* EndurancePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndurancePlanView.swift; sourceTree = "<group>"; };
-		219B6DDE2C44F4FC00D78148 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		219B6DE02C4502C500D78148 /* WorkoutPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanViewModel.swift; sourceTree = "<group>"; };
 		219B6DEB2C46077C00D78148 /* Reptor-NC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reptor-NC3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		219B6DEE2C46113500D78148 /* RMData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMData.swift; sourceTree = "<group>"; };
 		219B6DF02C4650BB00D78148 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		21F195282C413062009BDF5E /* RMProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMProgress.swift; sourceTree = "<group>"; };
+		
 		21F1952D2C416204009BDF5E /* RMCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCalculator.swift; sourceTree = "<group>"; };
-		8112A9BD2C416E1F0021EC20 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8112A9BD2C416E1F0021EC20 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		8112A9BF2C4401220021EC20 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		8112A9C12C4401A60021EC20 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		8112A9C52C4404B50021EC20 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
-		8112A9C82C44056F0021EC20 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		81A7B69F2C3FE4740060A23E /* Reptor-NC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reptor-NC3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reptor_NC3App.swift; sourceTree = "<group>"; };
 		81A7B6A42C3FE4750060A23E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81A7B6A62C3FE4760060A23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81A7B6A92C3FE4760060A23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9AAF45AC2C41278F00B0110E /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +69,6 @@
 				219B6DD82C4433F200D78148 /* StrengthPlanView.swift */,
 				219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */,
 				219B6DDC2C44342100D78148 /* EndurancePlanView.swift */,
-				219B6DDE2C44F4FC00D78148 /* TabBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -83,9 +76,6 @@
 		219B6DD42C4162CF00D78148 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9AAF45AC2C41278F00B0110E /* History.swift */,
-				21F195282C413062009BDF5E /* RMProgress.swift */,
-				8112A9BD2C416E1F0021EC20 /* Color.swift */,
 				8112A9C52C4404B50021EC20 /* Exercise.swift */,
 				219B6DEE2C46113500D78148 /* RMData.swift */,
 			);
@@ -101,12 +91,12 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		8112A9C72C4405620021EC20 /* Storage */ = {
+		814E33DA2C4673A100FCAC0D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				8112A9C82C44056F0021EC20 /* Storage.swift */,
+				8112A9BD2C416E1F0021EC20 /* Color+Extension.swift */,
 			);
-			path = Storage;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		81A7B6962C3FE4740060A23E = {
@@ -121,10 +111,10 @@
 		81A7B6A12C3FE4740060A23E /* Reptor-NC3 */ = {
 			isa = PBXGroup;
 			children = (
-				8112A9C72C4405620021EC20 /* Storage */,
 				219B6DD32C4162C100D78148 /* Views */,
 				219B6DD42C4162CF00D78148 /* Models */,
 				219B6DD52C4162D300D78148 /* ViewModels */,
+				814E33DA2C4673A100FCAC0D /* Helper */,
 				81A7B6A62C3FE4760060A23E /* Assets.xcassets */,
 				81A7B6A82C3FE4760060A23E /* Preview Content */,
 			);
@@ -213,8 +203,6 @@
 			files = (
 				219B6DDD2C44342100D78148 /* EndurancePlanView.swift in Sources */,
 				219B6DDB2C44341000D78148 /* HypertrophyPlanView.swift in Sources */,
-				9AAF45AD2C41278F00B0110E /* History.swift in Sources */,
-				8112A9C92C44056F0021EC20 /* Storage.swift in Sources */,
 				8112A9C22C4401A60021EC20 /* HistoryView.swift in Sources */,
 				8112A9C02C4401220021EC20 /* CalculatorView.swift in Sources */,
 				219B6DD72C43E27000D78148 /* WorkoutPlanView.swift in Sources */,
@@ -222,11 +210,9 @@
 				81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */,
 				81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */,
 				21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */,
-				21F195292C413062009BDF5E /* RMProgress.swift in Sources */,
-				8112A9BE2C416E1F0021EC20 /* Color.swift in Sources */,
+				8112A9BE2C416E1F0021EC20 /* Color+Extension.swift in Sources */,
 				8112A9C62C4404B50021EC20 /* Exercise.swift in Sources */,
-				219B6DDF2C44F4FC00D78148 /* TabBarView.swift in Sources */,
-				219B6DE12C4502C500D78148 /* WorkoutPlanViewModel.swift in Sources */,
+        219B6DE12C4502C500D78148 /* WorkoutPlanViewModel.swift in Sources */,
 				219B6DD92C4433F200D78148 /* StrengthPlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Reptor-NC3/Preview Content\"";
-				DEVELOPMENT_TEAM = H3779UJ6B2;
+				DEVELOPMENT_TEAM = XZYAP8RMAS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Reptor;
@@ -390,7 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Reptor-NC3/Preview Content\"";
-				DEVELOPMENT_TEAM = H3779UJ6B2;
+				DEVELOPMENT_TEAM = XZYAP8RMAS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Reptor;

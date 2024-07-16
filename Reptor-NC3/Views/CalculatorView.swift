@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct CalculatorView: View {
     @StateObject private var viewModel = RMCalculator()
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         NavigationStack {
@@ -21,14 +23,14 @@ struct CalculatorView: View {
                     
                     Text("Calculator")
                         .font(.system(size: 36, weight: .heavy))
-                        .foregroundStyle(Color(hex: "CC2F26"))
+                        .foregroundColor(Color(hex: "CC2F26"))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                     
-                    Spacer().frame(height: 60)
+                    Spacer().frame(height: 46)
                     
                     Text("Your 1RM is..")
-                        .foregroundStyle(Color(.gray))
+                        .foregroundColor(Color(.gray))
                     
                     Spacer().frame(height: 4)
                     
@@ -39,7 +41,7 @@ struct CalculatorView: View {
                             .font(.system(size: 30, weight: .bold))
                             .padding(.bottom, 14)
                     }
-                    .padding(.bottom, 40)
+                    .padding(.bottom, 30)
                     
                     HStack {
                         TextField("Weight", text: $viewModel.weight)
@@ -67,7 +69,6 @@ struct CalculatorView: View {
                                     .foregroundColor(.red)
                             }
                         }
-                        .foregroundColor(.red)
                         .pickerStyle(MenuPickerStyle())
                     }
                     .padding()
@@ -77,10 +78,11 @@ struct CalculatorView: View {
                     .padding(.horizontal)
                     
                     NavigationLink(
-                        destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax)
-//                        destination: WorkoutPlanView()
+                        destination: WorkoutPlanView()
                             .onAppear {
-                                viewModel.saveExercise()
+                                saveExercise()
+                              modelContext.insert(Exercise(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: Date()))
+                              try? modelContext.save()
                             }
                     ) {
                         Text("See Workout Plan")
@@ -103,6 +105,3 @@ struct CalculatorView: View {
     }
 }
 
-#Preview {
-    CalculatorView()
-}
