@@ -34,6 +34,7 @@
 		219B6DDC2C44342100D78148 /* EndurancePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndurancePlanView.swift; sourceTree = "<group>"; };
 		219B6DDE2C44F4FC00D78148 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		219B6DE02C4502C500D78148 /* WorkoutPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanViewModel.swift; sourceTree = "<group>"; };
+		219B6DEA2C46075C00D78148 /* Reptor-NC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Reptor-NC3.app"; path = "/Users/balya/Desktop/Projects/ADA/Reptor-NC3/build/Debug-iphoneos/Reptor-NC3.app"; sourceTree = "<absolute>"; };
 		21F195282C413062009BDF5E /* RMProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMProgress.swift; sourceTree = "<group>"; };
 		21F1952D2C416204009BDF5E /* RMCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCalculator.swift; sourceTree = "<group>"; };
 		8112A9BD2C416E1F0021EC20 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		8112A9C12C4401A60021EC20 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		8112A9C52C4404B50021EC20 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		8112A9C82C44056F0021EC20 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		81A7B69F2C3FE4740060A23E /* Reptor-NC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Reptor-NC3.app"; path = "/Users/balya/Desktop/Projects/ADA/Reptor-NC3/build/Debug-iphoneos/Reptor-NC3.app"; sourceTree = "<absolute>"; };
 		81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reptor_NC3App.swift; sourceTree = "<group>"; };
 		81A7B6A42C3FE4750060A23E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81A7B6A62C3FE4760060A23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 			);
 			name = "Reptor-NC3";
 			productName = "Reptor-NC3";
-			productReference = 81A7B69F2C3FE4740060A23E /* Reptor-NC3.app */;
+			productReference = 219B6DEA2C46075C00D78148 /* Reptor-NC3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
