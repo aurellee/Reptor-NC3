@@ -19,8 +19,12 @@
 //         .navigationBarTitle("Workout Plan", displayMode: .inline)
       
 import SwiftUI
+import SwiftData
 
 struct WorkoutPlanView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var exercises: [Exercise]
+
     let exercise: String = "Bench Press"
     let weight: Int = 100
     let reps: Int = 12
@@ -146,7 +150,15 @@ struct WorkoutPlanView: View {
                 }
                 .padding(.horizontal)
             }
+            Spacer()
         }
+    }
+    
+    private func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter.string(from: date)
     }
 }
 

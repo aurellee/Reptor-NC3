@@ -6,27 +6,36 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HistoryView: View {
-    @ObservedObject private var viewModel = RMCalculator()
-    
+    @Environment(\.modelContext) private var modelContext
+    @Query private var exercises: [Exercise]
+
     var body: some View {
-        NavigationView {
-            VStack {
-                List(viewModel.exercises) { exercise in
-                    VStack(alignment: .leading) {
-                        Text("Exercise: \(exercise.exercise)")
-                        Text("Weight: \(exercise.weight) kg")
-                        Text("Reps: \(exercise.reps)")
-                        Text("1RM: \(exercise.oneRepMax) kg")
-                    }
-                    .padding()
+        VStack {
+            List(exercises) { exercise in
+                VStack(alignment: .leading) {
+                    Text("Exercise: \(exercise.exercise)")
+                    Text("Weight: \(exercise.weight) kg")
+                    Text("Reps: \(exercise.reps)")
+                    Text("1RM: \(exercise.oneRepMax) kg")
+                    Text("Date: \(formatDate(exercise.date))")
                 }
-                .navigationBarTitle("History", displayMode: .inline)
+                .padding()
             }
+            .navigationBarTitle("History", displayMode: .inline)
         }
     }
+    
+    private func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter.string(from: date)
+    }
 }
+
 
 #Preview {
     HistoryView()
