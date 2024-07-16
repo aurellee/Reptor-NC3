@@ -9,7 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct HistoryView: View {
-    @ObservedObject private var viewModel = RMCalculator()
+//    @ObservedObject private var viewModel = RMCalculator()
+    @Environment(\.modelContext) var modelContext
     @Query var rmData: [RMData]
     
     var body: some View {
@@ -31,6 +32,11 @@ struct HistoryView: View {
                         }
                         .padding()
                     }
+                    .onDelete(perform: { indexes in
+                        for index in indexes {
+                            modelContext.delete(rmData[index])
+                        }
+                    })
                 }
                 .navigationBarTitle("History")
             }
