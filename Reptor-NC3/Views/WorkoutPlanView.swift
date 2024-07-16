@@ -75,13 +75,13 @@ struct WorkoutPlanView: View {
             .padding(.bottom)
             VStack{
                 if isStrengthTapped {
-                    StrengthPlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
+                    StrengthPlanView()
                 }
                 else if isHypertrophyTapped {
-                    HypertrophyPlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
+                    HypertrophyPlanView()
                 }
                 else if isEnduranceTapped {
-                    EndurancePlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
+                    EndurancePlanView()
                 }
                 else {
                     // Estimated Rep Maxes
@@ -125,13 +125,6 @@ struct WorkoutPlanView: View {
                     }
                 
                 Spacer()
-                
-                //                // Placeholder variables content
-                //                Text("Exercise: \(exercise)")
-                //                Text("Weight: \(weight) kg")
-                //                Text("Reps: \(reps)")
-                //                Text("1RM: \(oneRepMax) kg")
-                //                Spacer()
             }
         }
     }
