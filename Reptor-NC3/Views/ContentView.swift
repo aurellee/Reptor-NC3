@@ -18,7 +18,7 @@ struct ContentView: View {
         }
         .accentColor(Color(hex: "CC2F26"))
         .onAppear() {
-            UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().backgroundColor = .blackWhite
         }
     }
 }
