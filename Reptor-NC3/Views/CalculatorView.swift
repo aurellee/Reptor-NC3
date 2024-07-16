@@ -12,6 +12,8 @@ struct CalculatorView: View {
     @StateObject private var viewModel = RMCalculator()
     @Environment(\.modelContext) private var modelContext
     
+    let date = DateFormatter().string(from: Date.now)
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -78,10 +80,9 @@ struct CalculatorView: View {
                     .padding(.horizontal)
                     
                     NavigationLink(
-                        destination: WorkoutPlanView()
+                        destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax)
                             .onAppear {
-                                saveExercise()
-                              modelContext.insert(Exercise(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: Date()))
+                              modelContext.insert(RMData(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date))
                               try? modelContext.save()
                             }
                     ) {
