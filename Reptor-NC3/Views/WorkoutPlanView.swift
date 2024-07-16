@@ -73,18 +73,17 @@ struct WorkoutPlanView: View {
                 }
             }
             .padding(.bottom)
-            
-            if isStrengthTapped {
-                StrengthPlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
-            }
-            else if isHypertrophyTapped {
-                HypertrophyPlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
-            }
-            else if isEnduranceTapped {
-                EndurancePlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
-            }
-            else {
-                VStack{
+            VStack{
+                if isStrengthTapped {
+                    StrengthPlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
+                }
+                else if isHypertrophyTapped {
+                    HypertrophyPlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
+                }
+                else if isEnduranceTapped {
+                    EndurancePlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)
+                }
+                else {
                     // Estimated Rep Maxes
                     HStack{
                         Text("Estimated Rep Maxes")
@@ -110,29 +109,29 @@ struct WorkoutPlanView: View {
                         }
                     }
                     .listStyle(.plain)
-                    
-                    // Save History Button
-                    Text("Save History")
-                        .foregroundStyle(Color.white)
-                        .padding(.vertical, 14)
-                        .padding(.horizontal, 40)
-                        .background(Color.boldRed)
-                        .cornerRadius(19)
-                        .onTapGesture {
-                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                            modelContext.insert(RMData(weight: weight, reps: reps, exercise: exercise, oneRepMax: oneRepMax, date: date))
-                        }
-                    
-                    Spacer()
-                    
-                    //                // Placeholder variables content
-                    //                Text("Exercise: \(exercise)")
-                    //                Text("Weight: \(weight) kg")
-                    //                Text("Reps: \(reps)")
-                    //                Text("1RM: \(oneRepMax) kg")
-                    //                Spacer()
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
+                
+                // Save History Button
+                Text("Save History")
+                    .foregroundStyle(Color.white)
+                    .padding(.vertical, 14)
+                    .padding(.horizontal, 40)
+                    .background(Color.boldRed)
+                    .cornerRadius(19)
+                    .onTapGesture {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        modelContext.insert(RMData(weight: weight, reps: reps, exercise: exercise, oneRepMax: oneRepMax, date: date))
+                    }
+                
+                Spacer()
+                
+                //                // Placeholder variables content
+                //                Text("Exercise: \(exercise)")
+                //                Text("Weight: \(weight) kg")
+                //                Text("Reps: \(reps)")
+                //                Text("1RM: \(oneRepMax) kg")
+                //                Spacer()
             }
         }
     }

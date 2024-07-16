@@ -94,16 +94,6 @@ struct StrengthPlanView: View {
                     .padding(.horizontal)
                     
                     Spacer()
-                    
-                    // Save History Button
-                    Text("Save History")
-                        .foregroundStyle(Color.white)
-                        .padding(.vertical, 14)
-                        .padding(.horizontal, 40)
-                        .background(Color.boldRed)
-                        .cornerRadius(19)
-                    
-                    Spacer()
                 }
             }
             .padding()
