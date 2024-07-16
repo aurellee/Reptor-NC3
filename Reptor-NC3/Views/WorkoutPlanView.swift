@@ -1,25 +1,3 @@
-//struct WorkoutPlanView: View {
-//    let exercise: String
-//    let weight: String
-//    let reps: String
-//    let oneRepMax: String
-//    
-//    var body: some View {
-//        VStack {
-//            Text("Workout Plan")
-//                .font(.largeTitle)
-//                .padding()
-//            Text("Exercise: \(exercise)")
-//            Text("Weight: \(weight) kg")
-//            Text("Reps: \(reps)")
-//            Text("1RM: \(oneRepMax) kg")
-//            Spacer()
-//        }
-//        .padding()
-//        .navigationBarTitle("Workout Plan", displayMode: .inline)
-//    }
-//}
-      
 import SwiftUI
 import SwiftData
 
@@ -30,6 +8,7 @@ struct WorkoutPlanView: View {
     let weight: String
     let reps: String
     let oneRepMax: String
+    let date = DateFormatter().string(from: Date.now)
     
     @State var isAllTapped = true
     @State var isStrengthTapped = false
@@ -139,6 +118,10 @@ struct WorkoutPlanView: View {
                         .padding(.horizontal, 40)
                         .background(Color.boldRed)
                         .cornerRadius(19)
+                        .onTapGesture {
+                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                            modelContext.insert(RMData(weight: weight, reps: reps, exercise: exercise, oneRepMax: oneRepMax, date: date))
+                        }
                     
                     Spacer()
                     
