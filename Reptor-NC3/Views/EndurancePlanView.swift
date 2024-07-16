@@ -56,7 +56,7 @@ struct EndurancePlanView: View {
                 }
                 
                 HStack{
-                    Text("2-3 Sets")
+                    Text("2-3 sets")
                     Spacer()
                 }
                 .padding(.horizontal)

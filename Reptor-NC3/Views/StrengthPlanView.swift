@@ -56,7 +56,7 @@ struct StrengthPlanView: View {
                 }
                 
                 HStack{
-                    Text("4-6 Sets")
+                    Text("4-6 sets")
                     Spacer()
                 }
                 .padding(.horizontal)

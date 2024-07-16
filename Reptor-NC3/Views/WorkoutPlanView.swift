@@ -98,7 +98,7 @@ struct WorkoutPlanView: View {
                     List {
                         ForEach(1..<13) { item in
                             HStack(){
-                                Text("\(item) Reps")
+                                Text("\(item) reps")
                                     .padding(.leading)
                                 Spacer()
                                 Text("\(144 - item*4) kg")

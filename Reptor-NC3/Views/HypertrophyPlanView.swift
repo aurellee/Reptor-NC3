@@ -56,7 +56,7 @@ struct HypertrophyPlanView: View {
                 }
                 
                 HStack{
-                    Text("3-4 Sets")
+                    Text("3-4 sets")
                     Spacer()
                 }
                 .padding(.horizontal)
