@@ -1,27 +1,28 @@
 import Foundation
-import SwiftUI
+import Combine
+import SwiftData
 
-class WorkoutPlanViewModel {
-    // 1RM Calculator
-    let e = 2.71828182845904
-    var weights = 80
-    var rep = 12
-    
-    var oneRepMax: Int {
-        let weightPercent = 100 * weights
-        let b = 48.8 + (53.8 * pow(e,-0.075*Double(rep)))
-        
-        return Int(Double(weightPercent)/b)
-    }
-    
-    // Workout Plan All
+@MainActor
+class WorkoutPlanViewModel: ObservableObject {
+    // All Workout Plan
     let repArray = [1...12]
     let percentArray = [100, 96, 92, 89, 86, 84, 81, 79, 76, 74, 71, 68]
-    var weightArray : [Int] {
-        var repWeight: [Int] = []
-        for i in percentArray{
-            repWeight.append(Int(weights*i))
+    var weightArray : [String] = []
+    var tempWeight: Double = 0
+    
+    // Weight Percentages Calculation
+    func calulateWeights(oneRepMax: String) -> [String] {
+        for index in 1..<12 {
+            tempWeight = Double(percentArray[index]) * (Double(oneRepMax) ?? 0)
+            weightArray.append(String(format: "%.0f", tempWeight))
         }
-        return repWeight
+        return weightArray
+    }
+    
+    // Weight Percentage Calculation
+    var weightPercentage: Double = 0
+    func calculateWeightPercentage(percent: Double, oneRepMax: String) -> String {
+        weightPercentage = percent * (Double(oneRepMax) ?? 0)
+        return String(format: "%.0f", weightPercentage)
     }
 }

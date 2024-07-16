@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct EndurancePlanView: View {
+    @StateObject private var workoutPlanViewModel = WorkoutPlanViewModel()
+    let oneRepMax: String
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -14,9 +17,9 @@ struct EndurancePlanView: View {
                 }
                 
                 HStack{
-                    Text("56-184 kg")
+                    Text("\(workoutPlanViewModel.calculateWeightPercentage(percent: 0.4, oneRepMax: oneRepMax))-\(workoutPlanViewModel.calculateWeightPercentage(percent: 0.6, oneRepMax: oneRepMax)) kg")
                     Spacer()
-                    Text("40-60% of 140 kg")
+                    Text("40-60% of \(oneRepMax) kg")
                 }
                 .padding(.horizontal)
                 
@@ -53,7 +56,7 @@ struct EndurancePlanView: View {
                 }
                 
                 HStack{
-                    Text("2-3 Sets")
+                    Text("2-3 sets")
                     Spacer()
                 }
                 .padding(.horizontal)
@@ -86,5 +89,5 @@ struct EndurancePlanView: View {
 }
 
 #Preview {
-    EndurancePlanView()
+    EndurancePlanView(oneRepMax: "140")
 }
