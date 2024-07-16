@@ -9,7 +9,7 @@ struct WorkoutPlanView: View {
     let weight: String
     let reps: String
     let oneRepMax: String
-    let date = DateFormatter().string(from: Date.now)
+    let date = Date.now.formatted(date: .numeric, time: .omitted)
     
     @State var isAllTapped = true
     @State var isStrengthTapped = false
