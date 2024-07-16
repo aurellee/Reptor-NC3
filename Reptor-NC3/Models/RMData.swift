@@ -10,7 +10,7 @@ class RMData {
     var oneRepMax: String
     var date: String
 
-    init(id: UUID(), weight: String, reps: String, exercise: String, oneRepMax: String, date: String) {
+    init(id: UUID, weight: String, reps: String, exercise: String, oneRepMax: String, date: String) {
         self.id = id
         self.weight = weight
         self.reps = reps
