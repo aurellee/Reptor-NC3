@@ -16,12 +16,6 @@ struct HistoryView: View {
     var body: some View {
         NavigationView {
             VStack {
-//                List(viewModel.exercises) { exercise in
-//                    VStack(alignment: .leading) {
-//                        Text("Exercise: \(exercise.exercise)")
-//                        Text("Weight: \(exercise.weight) kg")
-//                        Text("Reps: \(exercise.reps)")
-//                        Text("1RM: \(exercise.oneRepMax) kg")
                 List{
                     ForEach(rmData) { data in
                         VStack(alignment: .leading) {
