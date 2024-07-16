@@ -10,7 +10,8 @@ struct HypertrophyPlanView: View {
         NavigationStack {
                 VStack {
                     if isAllTapped {
-                        WorkoutPlanView()
+//                        WorkoutPlanView()
+                        WorkoutPlanView(exercise: "Weightlift", weight: "30.0", reps: "30", oneRepMax: "10")
                     }
                     else if isStrengthTapped {
                         StrengthPlanView(isAllTapped: $isAllTapped, isStrengthTapped: $isStrengthTapped, isHypertrophyTapped: $isHypertrophyTapped, isEnduranceTapped: $isEnduranceTapped)

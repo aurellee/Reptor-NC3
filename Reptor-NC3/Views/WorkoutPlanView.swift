@@ -1,30 +1,32 @@
-// struct WorkoutPlanView: View {
-//     let exercise: String
-//     let weight: String
-//     let reps: String
-//     let oneRepMax: String
-    
-//     var body: some View {
-//         VStack {
-//             Text("Workout Plan")
-//                 .font(.largeTitle)
-//                 .padding()
-//             Text("Exercise: \(exercise)")
-//             Text("Weight: \(weight) kg")
-//             Text("Reps: \(reps)")
-//             Text("1RM: \(oneRepMax) kg")
-//             Spacer()
-//         }
-//         .padding()
-//         .navigationBarTitle("Workout Plan", displayMode: .inline)
+//struct WorkoutPlanView: View {
+//    let exercise: String
+//    let weight: String
+//    let reps: String
+//    let oneRepMax: String
+//    
+//    var body: some View {
+//        VStack {
+//            Text("Workout Plan")
+//                .font(.largeTitle)
+//                .padding()
+//            Text("Exercise: \(exercise)")
+//            Text("Weight: \(weight) kg")
+//            Text("Reps: \(reps)")
+//            Text("1RM: \(oneRepMax) kg")
+//            Spacer()
+//        }
+//        .padding()
+//        .navigationBarTitle("Workout Plan", displayMode: .inline)
+//    }
+//}
       
 import SwiftUI
 
 struct WorkoutPlanView: View {
-    let exercise: String = "Bench Press"
-    let weight: Int = 100
-    let reps: Int = 12
-    let oneRepMax: Int = 140
+        let exercise: String
+        let weight: String
+        let reps: String
+        let oneRepMax: String
     
     @State var isAllTapped = true
     @State var isStrengthTapped = false
@@ -151,6 +153,6 @@ struct WorkoutPlanView: View {
 }
 
 #Preview {
-//     WorkoutPlanView(exercise: "Weightlift", weight: "30.0", reps: "30", oneRepMax: "10")
-    WorkoutPlanView()
+     WorkoutPlanView(exercise: "Weightlift", weight: "30.0", reps: "30", oneRepMax: "10")
+//    WorkoutPlanView()
 }
