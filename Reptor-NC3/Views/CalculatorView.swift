@@ -13,7 +13,7 @@ struct CalculatorView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(hex: "F2F2F7")
+                Color.secondaryBackground
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
@@ -45,14 +45,14 @@ struct CalculatorView: View {
                         TextField("Weight", text: $viewModel.weight)
                             .keyboardType(.numberPad)
                             .padding()
-                            .background(Color.white)
+                            .background(Color.blackWhite)
                             .cornerRadius(8)
                             .shadow(radius: 1)
                         
                         TextField("Rep", text: $viewModel.reps)
                             .keyboardType(.numberPad)
                             .padding()
-                            .background(Color.white)
+                            .background(Color.blackWhite)
                             .cornerRadius(8)
                             .shadow(radius: 1)
                     }
@@ -71,7 +71,7 @@ struct CalculatorView: View {
                         .pickerStyle(MenuPickerStyle())
                     }
                     .padding()
-                    .background(Color.white)
+                    .background(Color.blackWhite)
                     .cornerRadius(8)
                     .shadow(radius: 1)
                     .padding(.horizontal)
