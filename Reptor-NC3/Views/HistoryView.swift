@@ -23,6 +23,7 @@ struct HistoryView: View {
                             Text("Weight: \(data.weight) kg")
                             Text("Reps: \(data.reps)")
                             Text("1RM: \(data.oneRepMax) kg")
+                            Text("Date: \(data.date)")
                         }
                         .padding()
                     }
