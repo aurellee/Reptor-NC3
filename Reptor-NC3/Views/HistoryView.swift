@@ -11,7 +11,7 @@ import SwiftData
 struct HistoryView: View {
 //    @ObservedObject private var viewModel = RMCalculator()
     @Environment(\.modelContext) var modelContext
-    @Query var rmData: [RMData]
+    @Query(sort: [SortDescriptor(\RMData.date, order: .reverse), SortDescriptor(\RMData.exercise, order: .forward)]) var rmData: [RMData]
     
     var body: some View {
         NavigationView {
@@ -38,12 +38,12 @@ struct HistoryView: View {
         }
     }
     
-    private func formatDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter.string(from: date)
-    }
+//    private func formatDate(_ date: Date) -> String {
+//        let formatter = DateFormatter()
+//        formatter.dateStyle = .medium
+//        formatter.timeStyle = .short
+//        return formatter.string(from: date)
+//    }
 }
 
 
