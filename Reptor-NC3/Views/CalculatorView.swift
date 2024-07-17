@@ -112,8 +112,16 @@ struct CalculatorView: View {
                     
                     Spacer()
                 }
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    UIApplication.shared.endEditing() // Hide the keyboard when tapping outside the TextFields
+                }
             }
         }
     }
 }
 
+#Preview {
+    CalculatorView()
+        .modelContainer(for: RMData.self)
+}
