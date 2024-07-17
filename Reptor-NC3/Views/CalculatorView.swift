@@ -13,6 +13,7 @@ struct CalculatorView: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                // background color
                 Color.primaryBackground
                     .edgesIgnoringSafeArea(.all)
                 
@@ -103,11 +104,16 @@ struct CalculatorView: View {
                                     Button("Save") {
                                         // haptics
                                         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                                        
+                                        // disable save button
                                         saveDisabled = true
+                                        
+                                        // show popup for 1.5 seconds
                                         showPopup = true
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                                             showPopup = false
                                         }
+                                        
                                         // save data
                                         modelContext.insert(RMData(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date, datetime: Date.now.formatted(date: .numeric, time: .standard)))
                                     }
