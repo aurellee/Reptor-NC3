@@ -7,3 +7,7 @@ struct ExerciseDetailView: View {
         Text("Hello World")
     }
 }
+
+#Preview {
+    ExerciseDetailView(exercise: "Squat")
+}
