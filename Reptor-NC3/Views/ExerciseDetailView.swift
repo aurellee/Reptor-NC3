@@ -16,7 +16,7 @@ struct ExerciseDetailView: View {
         }
         List {
             ForEach(rmData) { data in
-                NavigationLink(destination: WorkoutPlanView(exercise: data.exercise, weight: data.weight, reps: data.reps, oneRepMax: data.oneRepMax, date: data.date))
+                NavigationLink(destination: WorkoutPlanView(exercise: data.exercise, weight: data.weight, reps: data.reps, oneRepMax: data.oneRepMax, date: data.date, showPopup: .constant(false)))
                 {
                     if data.exercise == exercise {
                         HStack {
