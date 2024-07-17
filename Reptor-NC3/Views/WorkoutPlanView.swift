@@ -12,7 +12,6 @@ struct WorkoutPlanView: View {
     let date: String
     
     @State var showWeightDistribution = false
-    @State var isAllTapped = true
     @State var isStrengthTapped = true
     @State var isHypertrophyTapped = false
     @State var isEnduranceTapped = false
@@ -93,7 +92,6 @@ struct WorkoutPlanView: View {
                             .shadow(radius: isStrengthTapped ? 3 : 0))
                         .cornerRadius(6.5)
                         .onTapGesture {
-                            isAllTapped = false
                             isStrengthTapped = true
                             isHypertrophyTapped = false
                             isEnduranceTapped = false
@@ -118,7 +116,6 @@ struct WorkoutPlanView: View {
                             .shadow(radius: isHypertrophyTapped ? 3 : 0))
                         .cornerRadius(6.5)
                         .onTapGesture {
-                            isAllTapped = false
                             isStrengthTapped = false
                             isHypertrophyTapped = true
                             isEnduranceTapped = false
@@ -142,7 +139,6 @@ struct WorkoutPlanView: View {
                             .shadow(radius: isEnduranceTapped ? 3 : 0))
                         .cornerRadius(6.5)
                         .onTapGesture {
-                            isAllTapped = false
                             isStrengthTapped = false
                             isHypertrophyTapped = false
                             isEnduranceTapped = true
