@@ -29,7 +29,7 @@ struct WorkoutPlanView: View {
             }
             
             HStack {
-                Text("140")
+                Text("\(oneRepMax)")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .padding(.leading, 15)
@@ -40,7 +40,7 @@ struct WorkoutPlanView: View {
             }
             
             HStack {
-                Text("Bench Press")
+                Text("\(exercise)")
                     .foregroundStyle(Color.secondary)
                     .padding(.leading, 15)
                 Spacer()
