@@ -5,7 +5,23 @@ struct WeightDistributionView: View {
     let oneRepMax: String
     
     var body: some View {
+        // Title
+        Text("Weight Distribution")
+            .font(.title)
+            .fontWeight(.semibold)
+        
+        Divider()
+            .padding(.bottom)
+        
+        
         List {
+            // Estimated Rep Maxes
+            HStack {
+                Text("Estimated Rep Maxes")
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                Spacer()
+            }
             ForEach(0..<12) { index in
                 HStack(){
                     Text("\(workoutPlanViewModel.repArray[index]) reps")
