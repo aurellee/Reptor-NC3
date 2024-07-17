@@ -39,8 +39,8 @@ struct HistoryView: View {
                         }
                     })
                 }
-                .navigationBarTitle("History")
             }
+            .navigationBarTitle("Saved Plans")
         }
     }
     
