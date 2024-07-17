@@ -11,19 +11,17 @@ struct HistoryView: View {
             VStack {
                 List{
                     ForEach(rmData) { data in
-                        VStack(alignment: .leading) {
-                            Text("Exercise: \(data.exercise)")
-                            Text("Weight: \(data.weight) kg")
-                            Text("Reps: \(data.reps)")
-                            Text("1RM: \(data.oneRepMax) kg")
-                            Text("Date: \(data.date)")
-                        }
-                        .padding()
-                        .onTapGesture {
-                            NavigationLink(destination: ExerciseDetailView(exercise: data.exercise))
-                            {
-                                
+                        NavigationLink(
+                            destination: ExerciseDetailView(exercise: data.exercise))
+                        {
+                            VStack(alignment: .leading) {
+                                Text("Exercise: \(data.exercise)")
+                                Text("Weight: \(data.weight) kg")
+                                Text("Reps: \(data.reps)")
+                                Text("1RM: \(data.oneRepMax) kg")
+                                Text("Date: \(data.date)")
                             }
+                            .padding()
                         }
                     }
                     .onDelete(perform: { indexes in
