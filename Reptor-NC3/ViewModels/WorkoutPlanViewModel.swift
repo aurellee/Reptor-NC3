@@ -5,7 +5,7 @@ import SwiftData
 @MainActor
 class WorkoutPlanViewModel: ObservableObject {
     // All Workout Plan
-    let repArray = [1...12]
+    let repArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     let percentArray = [100, 96, 92, 89, 86, 84, 81, 79, 76, 74, 71, 68]
     var weightArray : [String] = []
     var tempWeight: Double = 0
