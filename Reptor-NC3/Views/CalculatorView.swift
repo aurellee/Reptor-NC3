@@ -19,7 +19,7 @@ struct CalculatorView: View {
                     Spacer().frame(height: 60)
                     
                     Text("Calculator")
-                        .font(.system(size: 36, weight: .heavy))
+                        .font(.system(size: 34, weight: .bold))
                         .foregroundColor(Color.boldRed)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
@@ -33,9 +33,9 @@ struct CalculatorView: View {
                     
                     HStack(alignment: .bottom, spacing: 2) {
                         Text("\(viewModel.oneRepMax)")
-                            .font(.system(size: 84, weight: .bold))
+                            .font(.system(size: 81, weight: .black))
                         Text("kg")
-                            .font(.system(size: 30, weight: .bold))
+                            .font(.system(size: 30, weight: .semibold))
                             .padding(.bottom, 14)
                     }
                     .padding(.bottom, 30)
