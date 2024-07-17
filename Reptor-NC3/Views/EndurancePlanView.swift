@@ -12,7 +12,6 @@ struct EndurancePlanView: View {
                     Text("Recommended Weights")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-//                        .padding(.leading, 15)
                     Spacer()
                 }
                 
@@ -21,7 +20,6 @@ struct EndurancePlanView: View {
                     Spacer()
                     Text("40-60% of \(oneRepMax) kg")
                 }
-//                .padding(.horizontal)
                 
                 Rectangle()
                     .frame(height: 20)
@@ -32,7 +30,6 @@ struct EndurancePlanView: View {
                     Text("Recommended Reps")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-//                        .padding(.leading, 15)
                     Spacer()
                 }
                 
@@ -40,7 +37,6 @@ struct EndurancePlanView: View {
                     Text("15-20 reps")
                     Spacer()
                 }
-//                .padding(.horizontal)
                 
                 Rectangle()
                     .frame(height: 20)
@@ -51,7 +47,6 @@ struct EndurancePlanView: View {
                     Text("Recommended Sets")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-//                        .padding(.leading, 15)
                     Spacer()
                 }
                 
@@ -59,7 +54,6 @@ struct EndurancePlanView: View {
                     Text("2-3 sets")
                     Spacer()
                 }
-//                .padding(.horizontal)
                 
                 Rectangle()
                     .frame(height: 20)
@@ -70,7 +64,6 @@ struct EndurancePlanView: View {
                     Text("Recommended Rest")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-//                        .padding(.leading, 15)
                     Spacer()
                 }
                 
@@ -78,12 +71,10 @@ struct EndurancePlanView: View {
                     Text("30-60 seconds between sets")
                     Spacer()
                 }
-//                .padding(.horizontal)
                 
                 Spacer()
             }
             .padding()
-//            .navigationBarTitle(Text("Workout Plan").font(.largeTitle), displayMode: .inline)
         }
     }
 }
