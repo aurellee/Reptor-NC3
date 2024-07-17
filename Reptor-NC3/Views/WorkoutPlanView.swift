@@ -173,6 +173,7 @@ struct WorkoutPlanView: View {
             }
             if showPopup {
                 Image("savePopup")
+                .opacity(0.8)
             }
         }
     }
