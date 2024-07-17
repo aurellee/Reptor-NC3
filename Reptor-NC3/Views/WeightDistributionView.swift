@@ -9,6 +9,7 @@ struct WeightDistributionView: View {
         Text("Weight Distribution")
             .font(.title)
             .fontWeight(.semibold)
+            .padding(.top, 50)
         
         Divider()
             .padding(.bottom)
