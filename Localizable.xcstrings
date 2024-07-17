@@ -2,13 +2,34 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "%@" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%@ kg" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ kg"
+          }
+        }
+      }
     },
     "%@-%@ kg" : {
       "localizations" : {
@@ -17,14 +38,34 @@
             "state" : "new",
             "value" : "%1$@-%2$@ kg"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@-%2$@ kg"
+          }
         }
       }
     },
     "%lld reps" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld perulangan"
+          }
+        }
+      }
     },
     "%lld%%" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
+          }
+        }
+      }
     },
     "1-2 minutes between sets" : {
       "localizations" : {
@@ -37,7 +78,14 @@
       }
     },
     "1RM" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1RM"
+          }
+        }
+      }
     },
     "2-3 minutes between sets" : {
       "localizations" : {
@@ -50,10 +98,24 @@
       }
     },
     "2-3 sets" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2-3 set"
+          }
+        }
+      }
     },
     "3-4 sets" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3-4 set"
+          }
+        }
+      }
     },
     "3-5 reps" : {
       "localizations" : {
@@ -66,7 +128,14 @@
       }
     },
     "4-6 sets" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4-6 set"
+          }
+        }
+      }
     },
     "8-12 reps" : {
       "localizations" : {
@@ -150,7 +219,14 @@
       }
     },
     "Endurance" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketahanan"
+          }
+        }
+      }
     },
     "Estimated Rep Maxes" : {
       "localizations" : {
@@ -205,10 +281,24 @@
       }
     },
     "kg" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kg"
+          }
+        }
+      }
     },
     "Muscle Growth" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perkembangan Otot"
+          }
+        }
+      }
     },
     "My Workout Plans" : {
       "extractionState" : "stale",
@@ -323,7 +413,14 @@
       }
     },
     "Strength" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kekuatan"
+          }
+        }
+      }
     },
     "Weight" : {
       "localizations" : {
