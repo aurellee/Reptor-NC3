@@ -55,6 +55,7 @@ struct WorkoutPlanView: View {
                     .padding(.leading, 15)
                     .sheet(isPresented: $showWeightDistribution) {
                         WeightDistributionView(oneRepMax: oneRepMax)
+                            .presentationDragIndicator(.visible)
                     }
                     Spacer()
                 }
