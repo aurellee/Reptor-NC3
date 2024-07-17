@@ -12,7 +12,7 @@ struct WorkoutPlanView: View {
     let date = Date.now.formatted(date: .numeric, time: .shortened)
     
     @State var isAllTapped = true
-    @State var isStrengthTapped = false
+    @State var isStrengthTapped = true
     @State var isHypertrophyTapped = false
     @State var isEnduranceTapped = false
     
