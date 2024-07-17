@@ -112,20 +112,6 @@ struct WorkoutPlanView: View {
                     .listStyle(.plain)
                     .padding(.horizontal)
                 }
-                
-                // Save History Button
-                Text("Save History")
-                    .foregroundStyle(Color.white)
-                    .padding(.vertical, 14)
-                    .padding(.horizontal, 40)
-                    .background(Color.boldRed)
-                    .cornerRadius(19)
-                    .onTapGesture {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        modelContext.insert(RMData(weight: weight, reps: reps, exercise: exercise, oneRepMax: oneRepMax, date: date))
-                    }
-                
-                Spacer()
             }
             Spacer()
         }
