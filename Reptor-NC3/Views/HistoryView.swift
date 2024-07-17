@@ -11,7 +11,7 @@ import SwiftData
 struct HistoryView: View {
 //    @ObservedObject private var viewModel = RMCalculator()
     @Environment(\.modelContext) var modelContext
-    @Query var rmData: [RMData]
+    @Query(sort: [SortDescriptor(\RMData.date, order: .reverse), SortDescriptor(\RMData.exercise, order: .forward)]) var rmData: [RMData]
     
     var body: some View {
         NavigationView {
@@ -23,8 +23,15 @@ struct HistoryView: View {
                             Text("Weight: \(data.weight) kg")
                             Text("Reps: \(data.reps)")
                             Text("1RM: \(data.oneRepMax) kg")
+                            Text("Date: \(data.date)")
                         }
                         .padding()
+                        .onTapGesture {
+                            NavigationLink(destination: ExerciseDetailView(exercise: data.exercise))
+                            {
+                                
+                            }
+                        }
                     }
                     .onDelete(perform: { indexes in
                         for index in indexes {
@@ -37,12 +44,12 @@ struct HistoryView: View {
         }
     }
     
-    private func formatDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter.string(from: date)
-    }
+//    private func formatDate(_ date: Date) -> String {
+//        let formatter = DateFormatter()
+//        formatter.dateStyle = .medium
+//        formatter.timeStyle = .short
+//        return formatter.string(from: date)
+//    }
 }
 
 
