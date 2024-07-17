@@ -3,8 +3,32 @@ import SwiftData
 
 struct ExerciseDetailView: View {
     let exercise : String
+    @Query(sort: [SortDescriptor(\RMData.date, order: .reverse)]) var rmData: [RMData]
+    
+    @State var showWorkoutPlan = false
     var body: some View {
-        Text("Hello World")
+        HStack {
+            Text("1RM")
+                .font(.subheadline)
+                .foregroundStyle(Color.secondary)
+                .padding(.leading, 15)
+            Spacer()
+        }
+        List {
+            ForEach(rmData) { data in
+                NavigationLink(destination: WorkoutPlanView(exercise: data.exercise, weight: data.weight, reps: data.reps, oneRepMax: data.oneRepMax, date: data.date))
+                {
+                    if data.exercise == exercise {
+                        HStack {
+                            Text("\(data.oneRepMax) kg")
+                            Spacer()
+                            Text(data.date)
+                                .foregroundStyle(Color.secondary)
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
