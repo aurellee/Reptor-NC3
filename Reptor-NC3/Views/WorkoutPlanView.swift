@@ -3,7 +3,6 @@ import SwiftData
 
 struct WorkoutPlanView: View {
     @Environment(\.modelContext) var modelContext
-    @StateObject private var workoutPlanViewModel = WorkoutPlanViewModel()
     
     let exercise: String
     let weight: String
@@ -12,9 +11,6 @@ struct WorkoutPlanView: View {
     let date: String
     
     @State var showWeightDistribution = false
-    @State var isStrengthTapped = true
-    @State var isHypertrophyTapped = false
-    @State var isEnduranceTapped = false
     @State var workoutFocus = 0
     
     @Binding var showPopup: Bool
@@ -122,13 +118,6 @@ struct WorkoutPlanView: View {
                 .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             }
         }
-    }
-    
-    private func formatDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter.string(from: date)
     }
 }
 
