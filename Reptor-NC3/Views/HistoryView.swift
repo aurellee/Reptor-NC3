@@ -26,6 +26,12 @@ struct HistoryView: View {
                             Text("Date: \(data.date)")
                         }
                         .padding()
+                        .onTapGesture {
+                            NavigationLink(destination: ExerciseDetailView(exercise: data.exercise))
+                            {
+                                
+                            }
+                        }
                     }
                     .onDelete(perform: { indexes in
                         for index in indexes {
