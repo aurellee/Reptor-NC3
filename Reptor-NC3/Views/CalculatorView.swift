@@ -81,9 +81,16 @@ struct CalculatorView: View {
                     
                     NavigationLink(
                         destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax)
-                            .onAppear {
-//                                modelContext.insert(RMData(id: UUID(), weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date))
-//                              try? modelContext.save()
+                            .toolbar {
+                                ToolbarItem(placement: .topBarTrailing) {
+                                    Button("Save") {
+                                        // haptics
+                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                        
+                                        // save data
+                                        modelContext.insert(RMData(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date))
+                                    }
+                                }
                             }
                     ) {
                         Text("See Workout Plan")
