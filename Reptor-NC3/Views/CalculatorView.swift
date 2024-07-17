@@ -6,6 +6,7 @@ struct CalculatorView: View {
     @Environment(\.modelContext) private var modelContext
     
     let date = Date.now.formatted(date: .numeric, time: .shortened)
+    @State var showPopup = false
     
     var body: some View {
         NavigationStack {
@@ -73,13 +74,16 @@ struct CalculatorView: View {
                     .padding(.horizontal)
                     
                     NavigationLink(
-                        destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax, date: date)
+                        destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax, date: date, showPopup: $showPopup)
                             .toolbar {
                                 ToolbarItem(placement: .topBarTrailing) {
                                     Button("Save") {
                                         // haptics
                                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                                        
+                                        showPopup = true
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                            showPopup = false
+                                        }
                                         // save data
                                         modelContext.insert(RMData(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date))
                                     }
