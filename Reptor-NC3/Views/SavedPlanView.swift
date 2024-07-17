@@ -21,7 +21,7 @@ struct SavedPlanView: View {
                 ScrollView {
                     VStack (spacing: 16) {
                         Spacer().frame(height: 10)
-                        ForEach(savedPlanViewModel.uniqueExercises(rmData)) { data in
+                        ForEach(savedPlanViewModel.uniqueExercises(rmData).prefix(3)) { data in
                             NavigationLink(
                                 destination: ExerciseDetailView(exercise: data.exercise)
                                     .toolbar(.hidden, for: .tabBar))
