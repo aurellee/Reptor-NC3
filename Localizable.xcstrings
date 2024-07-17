@@ -4,6 +4,9 @@
     "%@" : {
 
     },
+    "%@ kg" : {
+
+    },
     "%@-%@ kg" : {
       "localizations" : {
         "en" : {
@@ -13,9 +16,6 @@
           }
         }
       }
-    },
-    "%lld kg" : {
-
     },
     "%lld reps" : {
 
@@ -32,6 +32,9 @@
           }
         }
       }
+    },
+    "1RM" : {
+
     },
     "1RM: %@ kg" : {
 
@@ -126,6 +129,7 @@
       }
     },
     "All" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -144,6 +148,9 @@
           }
         }
       }
+    },
+    "Date: %@" : {
+
     },
     "Endurance" : {
       "localizations" : {
@@ -185,6 +192,9 @@
         }
       }
     },
+    "Focus" : {
+
+    },
     "History" : {
       "localizations" : {
         "id" : {
@@ -195,10 +205,10 @@
         }
       }
     },
-    "Hypertrophy" : {
+    "kg" : {
 
     },
-    "kg" : {
+    "Muscle Growth" : {
 
     },
     "Recommended Reps" : {
@@ -247,7 +257,11 @@
     "Reps: %@" : {
 
     },
+    "Save" : {
+
+    },
     "Save History" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -256,6 +270,9 @@
           }
         }
       }
+    },
+    "Saved Plans" : {
+
     },
     "See Workout Plan" : {
       "localizations" : {
@@ -266,6 +283,9 @@
           }
         }
       }
+    },
+    "Show More Weight Distribution Data" : {
+
     },
     "Strength" : {
       "localizations" : {
@@ -287,6 +307,9 @@
         }
       }
     },
+    "Weight Distribution" : {
+
+    },
     "Weight: %@ kg" : {
       "localizations" : {
         "id" : {
@@ -298,6 +321,7 @@
       }
     },
     "Workout Plan" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

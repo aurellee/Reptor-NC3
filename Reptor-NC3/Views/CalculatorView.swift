@@ -6,6 +6,8 @@ struct CalculatorView: View {
     @Environment(\.modelContext) private var modelContext
     
     let date = Date.now.formatted(date: .numeric, time: .shortened)
+    @State var showPopup = false
+    @State var saveDisabled = false
     
     var body: some View {
         NavigationStack {
@@ -18,7 +20,7 @@ struct CalculatorView: View {
                     
                     Text("Calculator")
                         .font(.system(size: 36, weight: .heavy))
-                        .foregroundColor(Color(hex: "CC2F26"))
+                        .foregroundColor(Color.boldRed)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                     
@@ -44,16 +46,18 @@ struct CalculatorView: View {
                             .padding()
                             .background(Color.blackWhite)
                             .cornerRadius(8)
-                            .shadow(radius: 1)
+//                            .shadow(radius: 1)
                         
                         TextField("Rep", text: $viewModel.reps)
                             .keyboardType(.numberPad)
                             .padding()
                             .background(Color.blackWhite)
                             .cornerRadius(8)
-                            .shadow(radius: 1)
+//                            .shadow(radius: 1)
                     }
+                    .frame(width: 361, height: 44)
                     .padding(.horizontal)
+                    .padding(.bottom, 8)
                     
                     HStack {
                         Text("Exercise")
@@ -67,22 +71,30 @@ struct CalculatorView: View {
                         .pickerStyle(MenuPickerStyle())
                     }
                     .padding()
+                    .frame(width: 361, height: 44)
                     .background(Color.blackWhite)
                     .cornerRadius(8)
-                    .shadow(radius: 1)
+//                    .shadow(radius: 1)
                     .padding(.horizontal)
+                    .padding(.bottom, 12)
                     
                     NavigationLink(
-                        destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax, date: date)
+                        destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax, date: date, showPopup: $showPopup)
+                            .onAppear{saveDisabled = false}
                             .toolbar {
                                 ToolbarItem(placement: .topBarTrailing) {
                                     Button("Save") {
                                         // haptics
-                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                                        
+                                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                                        saveDisabled = true
+                                        showPopup = true
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                            showPopup = false
+                                        }
                                         // save data
                                         modelContext.insert(RMData(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date))
                                     }
+                                    .disabled(saveDisabled)
                                 }
                             }
                     ) {
@@ -90,12 +102,11 @@ struct CalculatorView: View {
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color(hex: "CC2F26"))
+                            .frame(width: 176, height: 50)
+                            .background(Color.boldRed)
                             .cornerRadius(10)
                     }
                     .padding(.horizontal)
-                    .padding(.top, 80)
                     .disabled(viewModel.weight.isEmpty || viewModel.reps.isEmpty || viewModel.exercise == "None")
                     .opacity((viewModel.weight.isEmpty || viewModel.reps.isEmpty || viewModel.exercise == "None") ? 0.5 : 1.0)
                     

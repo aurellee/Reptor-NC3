@@ -1,10 +1,3 @@
-//
-//  HistoryView.swift
-//  Reptor-NC3
-//
-//  Created by Jaqueline Aurelia Langi on 14/07/24.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -14,23 +7,21 @@ struct HistoryView: View {
     @Query(sort: [SortDescriptor(\RMData.date, order: .reverse), SortDescriptor(\RMData.exercise, order: .forward)]) var rmData: [RMData]
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 List{
                     ForEach(rmData) { data in
-                        VStack(alignment: .leading) {
-                            Text("Exercise: \(data.exercise)")
-                            Text("Weight: \(data.weight) kg")
-                            Text("Reps: \(data.reps)")
-                            Text("1RM: \(data.oneRepMax) kg")
-                            Text("Date: \(data.date)")
-                        }
-                        .padding()
-                        .onTapGesture {
-                            NavigationLink(destination: ExerciseDetailView(exercise: data.exercise))
-                            {
-                                
+                        NavigationLink(
+                            destination: ExerciseDetailView(exercise: data.exercise))
+                        {
+                            VStack(alignment: .leading) {
+                                Text("Exercise: \(data.exercise)")
+                                Text("Weight: \(data.weight) kg")
+                                Text("Reps: \(data.reps)")
+                                Text("1RM: \(data.oneRepMax) kg")
+                                Text("Date: \(data.date)")
                             }
+                            .padding()
                         }
                     }
                     .onDelete(perform: { indexes in
@@ -39,17 +30,10 @@ struct HistoryView: View {
                         }
                     })
                 }
-                .navigationBarTitle("History")
             }
+            .navigationBarTitle("Saved Plans")
         }
     }
-    
-//    private func formatDate(_ date: Date) -> String {
-//        let formatter = DateFormatter()
-//        formatter.dateStyle = .medium
-//        formatter.timeStyle = .short
-//        return formatter.string(from: date)
-//    }
 }
 
 

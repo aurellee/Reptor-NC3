@@ -16,7 +16,7 @@ struct ContentView: View {
                     Text("History")
                 }
         }
-        .accentColor(Color(hex: "CC2F26"))
+        .accentColor(Color.boldRed)
         .onAppear() {
             UITabBar.appearance().backgroundColor = .blackWhite
         }
