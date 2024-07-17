@@ -6,7 +6,7 @@ struct CalculatorView: View {
     @Environment(\.modelContext) private var modelContext
     
     let date = Date.now.formatted(date: .numeric, time: .omitted)
-    let datetime = Date.now.formatted(date: .numeric, time: .shortened)
+    
     @State var showPopup = false
     @State var saveDisabled = false
     
@@ -95,7 +95,7 @@ struct CalculatorView: View {
                                             showPopup = false
                                         }
                                         // save data
-                                        modelContext.insert(RMData(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date, datetime: datetime))
+                                        modelContext.insert(RMData(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date, datetime: Date.now.formatted(date: .numeric, time: .standard)))
                                     }
                                     .disabled(saveDisabled)
                                 }
