@@ -11,6 +11,7 @@ struct WorkoutPlanView: View {
     let oneRepMax: String
     let date = Date.now.formatted(date: .numeric, time: .shortened)
     
+    @State var showWeightDistribution = false
     @State var isAllTapped = true
     @State var isStrengthTapped = true
     @State var isHypertrophyTapped = false
@@ -47,10 +48,14 @@ struct WorkoutPlanView: View {
             .padding(.bottom, 12)
             
             HStack {
-                Text("Show More Weight Distribution Data")
-                    .font(.caption)
-                    .foregroundStyle(Color.blue)
-                    .padding(.leading, 15)
+                Button("Show More Weight Distribution Data"){
+                    showWeightDistribution.toggle()
+                }
+                .font(.caption)
+                .padding(.leading, 15)
+                .sheet(isPresented: $showWeightDistribution) {
+                    WeightDistributionView(oneRepMax: oneRepMax)
+                }
                 Spacer()
             }
             .padding(.bottom, 48)
