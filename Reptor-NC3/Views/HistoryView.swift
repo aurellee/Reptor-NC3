@@ -97,7 +97,8 @@ struct HistoryView: View {
                         Spacer().frame(height: 10)
                         ForEach(rmData) { data in
                             NavigationLink(
-                                destination: ExerciseDetailView(exercise: data.exercise))
+                                destination: ExerciseDetailView(exercise: data.exercise)
+                                    .toolbar(.hidden, for: .tabBar))
                             {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 25)
