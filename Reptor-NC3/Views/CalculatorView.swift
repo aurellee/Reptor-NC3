@@ -139,6 +139,8 @@ struct CalculatorView: View {
                     UIApplication.shared.endEditing() // Hide the keyboard when tapping outside the TextFields
                 }
             }
+            .navigationTitle("Calculator")
+            .navigationBarHidden(true)
         }
     }
 }
