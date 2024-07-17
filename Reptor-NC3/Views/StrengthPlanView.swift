@@ -12,7 +12,7 @@ struct StrengthPlanView: View {
                     Text("Recommended Weights")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-                        .padding(.leading, 15)
+//                        .padding(.leading, 15)
                     Spacer()
                 }
                 
@@ -21,7 +21,7 @@ struct StrengthPlanView: View {
                     Spacer()
                     Text("80-90% of \(oneRepMax) kg")
                 }
-                .padding(.horizontal)
+//                .padding(.horizontal)
                 
                 Rectangle()
                     .frame(height: 20)
@@ -32,7 +32,7 @@ struct StrengthPlanView: View {
                     Text("Recommended Reps")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-                        .padding(.leading, 15)
+//                        .padding(.leading, 15)
                     Spacer()
                 }
                 
@@ -40,7 +40,7 @@ struct StrengthPlanView: View {
                     Text("3-5 reps")
                     Spacer()
                 }
-                .padding(.horizontal)
+//                .padding(.horizontal)
                 
                 Rectangle()
                     .frame(height: 20)
@@ -51,7 +51,7 @@ struct StrengthPlanView: View {
                     Text("Recommended Sets")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-                        .padding(.leading, 15)
+//                        .padding(.leading, 15)
                     Spacer()
                 }
                 
@@ -59,7 +59,7 @@ struct StrengthPlanView: View {
                     Text("4-6 sets")
                     Spacer()
                 }
-                .padding(.horizontal)
+//                .padding(.horizontal)
                 
                 Rectangle()
                     .frame(height: 20)
@@ -70,7 +70,7 @@ struct StrengthPlanView: View {
                     Text("Recommended Rest")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-                        .padding(.leading, 15)
+//                        .padding(.leading, 15)
                     Spacer()
                 }
                 
@@ -78,7 +78,7 @@ struct StrengthPlanView: View {
                     Text("2-3 minutes between sets")
                     Spacer()
                 }
-                .padding(.horizontal)
+//                .padding(.horizontal)
                 
                 Spacer()
             }
