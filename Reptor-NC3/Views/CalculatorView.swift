@@ -79,7 +79,7 @@ struct CalculatorView: View {
                                 ToolbarItem(placement: .topBarTrailing) {
                                     Button("Save") {
                                         // haptics
-                                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                                         showPopup = true
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                             showPopup = false
