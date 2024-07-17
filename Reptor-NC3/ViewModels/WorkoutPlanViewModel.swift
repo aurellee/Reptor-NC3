@@ -12,8 +12,8 @@ class WorkoutPlanViewModel: ObservableObject {
     
     // Weight Percentages Calculation
     func calulateWeights(oneRepMax: String) -> [String] {
-        for index in 1..<12 {
-            tempWeight = Double(percentArray[index]) * (Double(oneRepMax) ?? 0)
+        for index in 0..<12 {
+            tempWeight = Double(percentArray[index]) * (Double(oneRepMax) ?? 1)/100
             weightArray.append(String(format: "%.0f", tempWeight))
         }
         return weightArray
