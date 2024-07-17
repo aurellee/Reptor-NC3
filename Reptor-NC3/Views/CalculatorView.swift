@@ -59,6 +59,7 @@ struct CalculatorView: View {
                     .padding(.horizontal)
                     .padding(.bottom, 8)
                     
+                    
                     HStack {
                         Text("Exercise")
                         Spacer()
