@@ -191,6 +191,7 @@
 
     },
     "History" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -265,6 +266,9 @@
           }
         }
       }
+    },
+    "Saved Plans" : {
+
     },
     "See Workout Plan" : {
       "localizations" : {
