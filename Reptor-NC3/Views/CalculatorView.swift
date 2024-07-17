@@ -1,10 +1,3 @@
-//
-//  CalculatorView.swift
-//  Reptor-NC3
-//
-//  Created by Jaqueline Aurelia Langi on 14/07/24.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -12,7 +5,7 @@ struct CalculatorView: View {
     @StateObject private var viewModel = RMCalculator()
     @Environment(\.modelContext) private var modelContext
     
-    let date = DateFormatter().string(from: Date.now)
+    let date = Date.now.formatted(date: .numeric, time: .shortened)
     
     var body: some View {
         NavigationStack {
