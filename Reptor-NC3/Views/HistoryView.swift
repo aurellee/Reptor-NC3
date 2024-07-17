@@ -156,7 +156,7 @@ struct HistoryView: View {
                             }
                         })
                     }
-                    .navigationTitle("My Workout Plans")
+                    .navigationTitle("Saved Plans")
                 }
             }
         }
