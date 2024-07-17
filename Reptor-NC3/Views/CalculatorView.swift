@@ -73,7 +73,7 @@ struct CalculatorView: View {
                     .padding(.horizontal)
                     
                     NavigationLink(
-                        destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax)
+                        destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax, date: date)
                             .toolbar {
                                 ToolbarItem(placement: .topBarTrailing) {
                                     Button("Save") {

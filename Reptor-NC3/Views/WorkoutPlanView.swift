@@ -9,7 +9,7 @@ struct WorkoutPlanView: View {
     let weight: String
     let reps: String
     let oneRepMax: String
-    let date = Date.now.formatted(date: .numeric, time: .shortened)
+    let date: String
     
     @State var showWeightDistribution = false
     @State var isAllTapped = true
@@ -179,5 +179,5 @@ struct WorkoutPlanView: View {
 }
 
 #Preview {
-     WorkoutPlanView(exercise: "Weightlift", weight: "30.0", reps: "30", oneRepMax: "120")
+    WorkoutPlanView(exercise: "Weightlift", weight: "30.0", reps: "30", oneRepMax: "120", date: "17/07/2024")
 }
