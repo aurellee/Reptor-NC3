@@ -3,7 +3,7 @@ import SwiftData
 
 struct ExerciseDetailView: View {
     let exercise : String
-    @Query(sort: [SortDescriptor(\RMData.date, order: .reverse)]) var rmData: [RMData]
+    @Query(sort: [SortDescriptor(\RMData.datetime, order: .reverse)]) var rmData: [RMData]
     
     @State var showWorkoutPlan = false
     var body: some View {
