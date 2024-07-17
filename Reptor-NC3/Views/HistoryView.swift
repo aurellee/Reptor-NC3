@@ -80,7 +80,7 @@ import SwiftData
 
 struct HistoryView: View {
     @Environment(\.modelContext) var modelContext
-    @Query(sort: [SortDescriptor(\RMData.date, order: .reverse), SortDescriptor(\RMData.exercise, order: .forward)]) var rmData: [RMData]
+    @Query(sort: [SortDescriptor(\RMData.datetime, order: .reverse)]) var rmData: [RMData]
     
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.boldRed]
