@@ -147,14 +147,7 @@
       }
     },
     "Endurance" : {
-      "localizations" : {
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ketahanan"
-          }
-        }
-      }
+
     },
     "Estimated Rep Maxes" : {
       "localizations" : {
@@ -188,7 +181,14 @@
       }
     },
     "Focus" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fokus"
+          }
+        }
+      }
     },
     "History" : {
       "extractionState" : "stale",
@@ -208,7 +208,14 @@
 
     },
     "My Workout Plans" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rencana Latihan Saya"
+          }
+        }
+      }
     },
     "Recommended Reps" : {
       "localizations" : {
@@ -251,10 +258,24 @@
       }
     },
     "Rep" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perulangan"
+          }
+        }
+      }
     },
     "Save" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
+          }
+        }
+      }
     },
     "Save History" : {
       "extractionState" : "stale",
@@ -268,30 +289,37 @@
       }
     },
     "Saved Plans" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rencana Tersimpen"
+          }
+        }
+      }
     },
     "See Workout Plan" : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lihat Rencana Pelatihan"
+            "value" : "Lihat Rencana Latihan"
           }
         }
       }
     },
     "Show More Weight Distribution Data" : {
-
-    },
-    "Strength" : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kekuatan"
+            "value" : "Tunjukkan Data Distribusi Beban"
           }
         }
       }
+    },
+    "Strength" : {
+
     },
     "Weight" : {
       "localizations" : {
@@ -304,7 +332,14 @@
       }
     },
     "Weight Distribution" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Distribusi Beban"
+          }
+        }
+      }
     },
     "Weight: %@ kg" : {
       "extractionState" : "stale",
@@ -318,7 +353,6 @@
       }
     },
     "Workout Plan" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
