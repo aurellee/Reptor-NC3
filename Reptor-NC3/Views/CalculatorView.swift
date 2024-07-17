@@ -46,14 +46,28 @@ struct CalculatorView: View {
                             .keyboardType(.numberPad)
                             .padding()
                             .background(Color.listFill)
-                            .cornerRadius(8)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 8,
+                                    bottomLeadingRadius: 8,
+                                    bottomTrailingRadius: 0,
+                                    topTrailingRadius: 0
+                                )
+                            )
 //                            .shadow(radius: 1)
                         
                         TextField("Rep", text: $viewModel.reps)
                             .keyboardType(.numberPad)
                             .padding()
                             .background(Color.listFill)
-                            .cornerRadius(8)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 0,
+                                    bottomLeadingRadius: 0,
+                                    bottomTrailingRadius: 8,
+                                    topTrailingRadius: 8
+                                )
+                            )
 //                            .shadow(radius: 1)
                     }
                     .frame(width: 361, height: 44)
