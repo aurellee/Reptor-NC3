@@ -22,7 +22,7 @@
 		8112A9C02C4401220021EC20 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9BF2C4401220021EC20 /* CalculatorView.swift */; };
 		8112A9C22C4401A60021EC20 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9C12C4401A60021EC20 /* HistoryView.swift */; };
 		81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */; };
-		81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A42C3FE4750060A23E /* ContentView.swift */; };
+		81A7B6A52C3FE4750060A23E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A42C3FE4750060A23E /* TabBarView.swift */; };
 		81A7B6A72C3FE4760060A23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A7B6A62C3FE4760060A23E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,7 @@
 		8112A9C12C4401A60021EC20 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		817304622C47EADA001971F3 /* Reptor-NC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reptor-NC3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reptor_NC3App.swift; sourceTree = "<group>"; };
-		81A7B6A42C3FE4750060A23E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81A7B6A42C3FE4750060A23E /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		81A7B6A62C3FE4760060A23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81A7B6A92C3FE4760060A23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */,
-				81A7B6A42C3FE4750060A23E /* ContentView.swift */,
+				81A7B6A42C3FE4750060A23E /* TabBarView.swift */,
 				8112A9BF2C4401220021EC20 /* CalculatorView.swift */,
 				219B6DD62C43E27000D78148 /* WorkoutPlanView.swift */,
 				219B6DF52C4764A700D78148 /* WeightDistributionView.swift */,
@@ -210,7 +210,7 @@
 				8112A9C02C4401220021EC20 /* CalculatorView.swift in Sources */,
 				219B6DD72C43E27000D78148 /* WorkoutPlanView.swift in Sources */,
 				219B6DEF2C46113500D78148 /* RMData.swift in Sources */,
-				81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */,
+				81A7B6A52C3FE4750060A23E /* TabBarView.swift in Sources */,
 				81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */,
 				21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */,
 				219B6DF82C47BF9A00D78148 /* HideKeyboard.swift in Sources */,

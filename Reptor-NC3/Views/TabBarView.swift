@@ -1,7 +1,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct TabBarView: View {
     var body: some View {
         TabView {
             CalculatorView()
@@ -24,6 +24,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    TabBarView()
         .modelContainer(for: RMData.self)
 }
