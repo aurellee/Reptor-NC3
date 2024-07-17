@@ -14,7 +14,7 @@ struct HistoryView: View {
     @Query(sort: [SortDescriptor(\RMData.date, order: .reverse), SortDescriptor(\RMData.exercise, order: .forward)]) var rmData: [RMData]
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 List{
                     ForEach(rmData) { data in
