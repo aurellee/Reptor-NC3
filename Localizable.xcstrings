@@ -36,9 +36,6 @@
     "1RM" : {
 
     },
-    "1RM: %@ kg" : {
-
-    },
     "2-3 minutes between sets" : {
       "localizations" : {
         "id" : {
@@ -149,9 +146,6 @@
         }
       }
     },
-    "Date: %@" : {
-
-    },
     "Endurance" : {
       "localizations" : {
         "id" : {
@@ -183,6 +177,7 @@
       }
     },
     "Exercise: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -209,6 +204,9 @@
 
     },
     "Muscle Growth" : {
+
+    },
+    "My Workout Plans" : {
 
     },
     "Recommended Reps" : {
@@ -254,9 +252,6 @@
     "Rep" : {
 
     },
-    "Reps: %@" : {
-
-    },
     "Save" : {
 
     },
@@ -270,9 +265,6 @@
           }
         }
       }
-    },
-    "Saved Plans" : {
-
     },
     "See Workout Plan" : {
       "localizations" : {
@@ -311,6 +303,7 @@
 
     },
     "Weight: %@ kg" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
