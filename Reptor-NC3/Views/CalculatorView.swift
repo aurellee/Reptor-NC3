@@ -12,7 +12,7 @@ struct CalculatorView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.secondaryBackground
+                Color.primaryBackground
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
@@ -27,7 +27,7 @@ struct CalculatorView: View {
                     Spacer().frame(height: 46)
                     
                     Text("Your 1RM is..")
-                        .foregroundColor(Color(.gray))
+                        .foregroundColor(Color.secondary)
                     
                     Spacer().frame(height: 4)
                     
@@ -44,14 +44,14 @@ struct CalculatorView: View {
                         TextField("Weight", text: $viewModel.weight)
                             .keyboardType(.numberPad)
                             .padding()
-                            .background(Color.blackWhite)
+                            .background(Color.listFill)
                             .cornerRadius(8)
 //                            .shadow(radius: 1)
                         
                         TextField("Rep", text: $viewModel.reps)
                             .keyboardType(.numberPad)
                             .padding()
-                            .background(Color.blackWhite)
+                            .background(Color.listFill)
                             .cornerRadius(8)
 //                            .shadow(radius: 1)
                     }
@@ -73,7 +73,7 @@ struct CalculatorView: View {
                     }
                     .padding()
                     .frame(width: 361, height: 44)
-                    .background(Color.blackWhite)
+                    .background(Color.listFill)
                     .cornerRadius(8)
 //                    .shadow(radius: 1)
                     .padding(.horizontal)
@@ -101,15 +101,14 @@ struct CalculatorView: View {
                     ) {
                         Text("See Workout Plan")
                             .font(.headline)
-                            .foregroundColor(.white)
+                            .foregroundStyle(viewModel.weight.isEmpty || viewModel.reps.isEmpty || viewModel.exercise == "None" ? Color.disableButtonText : Color.blackWhite)
                             .padding()
                             .frame(width: 176, height: 50)
-                            .background(Color.boldRed)
+                            .background(viewModel.weight.isEmpty || viewModel.reps.isEmpty || viewModel.exercise == "None" ? Color.disableButton : Color.boldRed)
                             .cornerRadius(10)
                     }
                     .padding(.horizontal)
                     .disabled(viewModel.weight.isEmpty || viewModel.reps.isEmpty || viewModel.exercise == "None")
-                    .opacity((viewModel.weight.isEmpty || viewModel.reps.isEmpty || viewModel.exercise == "None") ? 0.5 : 1.0)
                     
                     Spacer()
                 }
