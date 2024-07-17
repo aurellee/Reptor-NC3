@@ -7,6 +7,7 @@ struct CalculatorView: View {
     
     let date = Date.now.formatted(date: .numeric, time: .shortened)
     @State var showPopup = false
+    @State var saveDisabled = false
     
     var body: some View {
         NavigationStack {
@@ -79,11 +80,13 @@ struct CalculatorView: View {
                     
                     NavigationLink(
                         destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax, date: date, showPopup: $showPopup)
+                            .onAppear{saveDisabled = false}
                             .toolbar {
                                 ToolbarItem(placement: .topBarTrailing) {
                                     Button("Save") {
                                         // haptics
                                         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                                        saveDisabled = true
                                         showPopup = true
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                                             showPopup = false
@@ -91,6 +94,7 @@ struct CalculatorView: View {
                                         // save data
                                         modelContext.insert(RMData(weight: viewModel.weight, reps: viewModel.reps, exercise: viewModel.exercise, oneRepMax: viewModel.oneRepMax, date: date))
                                     }
+                                    .disabled(saveDisabled)
                                 }
                             }
                     ) {
