@@ -78,7 +78,7 @@ import SwiftData
 //}
 
 
-struct HistoryView: View {
+struct SavedPlanView: View {
     @Environment(\.modelContext) var modelContext
     @Query(sort: [SortDescriptor(\RMData.datetime, order: .reverse)]) var rmData: [RMData]
     
@@ -167,6 +167,6 @@ struct HistoryView: View {
 
 
 #Preview {
-    HistoryView()
+    SavedPlanView()
 }
 

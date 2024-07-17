@@ -10,7 +10,7 @@ struct TabBarView: View {
                     Text("Calculator")
                 }
             
-            HistoryView()
+            SavedPlanView()
                 .tabItem {
                     Image(systemName: "list.bullet.rectangle.portrait.fill")
                     Text("Saved Plans")
