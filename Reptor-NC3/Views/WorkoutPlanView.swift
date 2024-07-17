@@ -59,6 +59,8 @@ struct WorkoutPlanView: View {
                     }
             }
             .padding(.bottom)
+            
+            // Plan View
             VStack{
                 if isStrengthTapped {
                     StrengthPlanView(oneRepMax: oneRepMax)
