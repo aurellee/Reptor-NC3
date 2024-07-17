@@ -15,6 +15,7 @@ struct WorkoutPlanView: View {
     @State var isStrengthTapped = true
     @State var isHypertrophyTapped = false
     @State var isEnduranceTapped = false
+    @State var workoutFocus = 0
     
     @Binding var showPopup: Bool
     
@@ -73,97 +74,27 @@ struct WorkoutPlanView: View {
                 
                 // Category
                 HStack(spacing: 10){
-                    Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
-                        Text("1").tag(1)
-                        /*@START_MENU_TOKEN@*/Text("2").tag(2)/*@END_MENU_TOKEN@*/
-                    }.pickerStyle(.segmented)
-                    Text("Strength")
-                        .foregroundStyle(isStrengthTapped ? Color.primary : Color.secondary)
-                        .padding(.vertical, 7)
-                        .padding(.horizontal, 14)
-    //                    .background(isStrengthTapped ? Color.blackWhite : Color.secondaryBackground)
-                        .background(isStrengthTapped ?
-                                Rectangle()
-                            .foregroundStyle(Color.blackWhite)
-                            .frame(width: 90, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isStrengthTapped ? 3 : 0)
-                                    :
-                                Rectangle()
-                            .foregroundStyle(Color.secondaryBackground)
-                            .frame(width: 90, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isStrengthTapped ? 3 : 0))
-                        .cornerRadius(6.5)
-                        .onTapGesture {
-                            isStrengthTapped = true
-                            isHypertrophyTapped = false
-                            isEnduranceTapped = false
-                        }
-    //                        .padding(.leading, 16)
-                    Text("Muscle Growth")
-                        .foregroundStyle(isHypertrophyTapped ? Color.primary : Color.secondary)
-                        .padding(.vertical, 7)
-                        .padding(.horizontal, 14)
-    //                    .background(isHypertrophyTapped ? Color.blackWhite : Color.secondaryBackground)
-                        .background(isHypertrophyTapped ?
-                                Rectangle()
-                            .foregroundStyle(Color.blackWhite)
-                            .frame(width: 130, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isHypertrophyTapped ? 3 : 0)
-                                    :
-                                Rectangle()
-                            .foregroundStyle(Color.secondaryBackground)
-                            .frame(width: 130, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isHypertrophyTapped ? 3 : 0))
-                        .cornerRadius(6.5)
-                        .onTapGesture {
-                            isStrengthTapped = false
-                            isHypertrophyTapped = true
-                            isEnduranceTapped = false
-                        }
-                    Text("Endurance")
-                        .foregroundStyle(isEnduranceTapped ? Color.primary : Color.secondary)
-                        .padding(.vertical, 7)
-                        .padding(.horizontal, 14)
-    //                    .background(isEnduranceTapped ? Color.blackWhite : Color.secondaryBackground)
-                        .background(isEnduranceTapped ?
-                                Rectangle()
-                            .foregroundStyle(Color.blackWhite)
-                            .frame(width: 100, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isEnduranceTapped ? 3 : 0)
-                                    :
-                                Rectangle()
-                            .foregroundStyle(Color.secondaryBackground)
-                            .frame(width: 100, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isEnduranceTapped ? 3 : 0))
-                        .cornerRadius(6.5)
-                        .onTapGesture {
-                            isStrengthTapped = false
-                            isHypertrophyTapped = false
-                            isEnduranceTapped = true
-                        }
+                    Picker("", selection: $workoutFocus) {
+                        Text("Strength").tag(0)
+                        Text("Muscle Growth").tag(1)
+                        Text("Endurance").tag(2)
+                    }
+                    .pickerStyle(.segmented)
+                    .padding(.trailing, 20)
+                    .padding(.leading,20)
+                    
                 }
-                .background(
-                    Rectangle()
-                        .cornerRadius(8)
-                        .foregroundStyle(Color.secondaryBackground)
-                )
                 .padding(.bottom)
                 
                 // Plan View
                 VStack{
-                    if isStrengthTapped {
+                    if workoutFocus == 0 {
                         StrengthPlanView(oneRepMax: oneRepMax)
                     }
-                    else if isHypertrophyTapped {
+                    else if workoutFocus == 1 {
                         HypertrophyPlanView(oneRepMax: oneRepMax)
                     }
-                    else if isEnduranceTapped {
+                    else if workoutFocus == 2 {
                         EndurancePlanView(oneRepMax: oneRepMax)
                     }
                     else {
