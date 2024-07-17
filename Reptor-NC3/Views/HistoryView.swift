@@ -1,18 +1,14 @@
-//import SwiftUI
-//import SwiftData
-//
+import SwiftUI
+import SwiftData
+
 //struct HistoryView: View {
-////    @ObservedObject private var viewModel = RMCalculator()
 //    @Environment(\.modelContext) var modelContext
 //    @Query(sort: [SortDescriptor(\RMData.date, order: .reverse), SortDescriptor(\RMData.exercise, order: .forward)]) var rmData: [RMData]
-//    
-//    init() {
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.boldRed]
-//    }
 //    
 //    var body: some View {
 //        NavigationStack {
 //            VStack {
+//                List {
 //                    ForEach(rmData) { data in
 //                        NavigationLink(
 //                            destination: ExerciseDetailView(exercise: data.exercise))
@@ -75,21 +71,14 @@
 //                        }
 //                    })
 //                }
+//            }
 //            .navigationBarTitle("Saved Plans")
 //        }
 //    }
 //}
-//
-//
-//#Preview {
-//    HistoryView()
-//}
 
-import SwiftUI
-import SwiftData
 
 struct HistoryView: View {
-//    @ObservedObject private var viewModel = RMCalculator()
     @Environment(\.modelContext) var modelContext
     @Query(sort: [SortDescriptor(\RMData.date, order: .reverse), SortDescriptor(\RMData.exercise, order: .forward)]) var rmData: [RMData]
     
@@ -111,7 +100,7 @@ struct HistoryView: View {
                             {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 25)
-                                        .foregroundStyle(Color.blackWhite)
+                                        .foregroundStyle(Color.listFill)
                                         .frame(width: 337, height: 143)
                                     
                                     HStack {
@@ -140,14 +129,14 @@ struct HistoryView: View {
                                             HStack {
                                                 VStack {
                                                     Text("Weight")
-                                                        .foregroundStyle(Color.primary)
+                                                        .foregroundStyle(Color.secondary)
                                                     Text("\(data.weight)")
                                                         .foregroundStyle(Color.primary)
                                                 }
                                                 
                                                 VStack {
                                                     Text("Rep")
-                                                        .foregroundStyle(Color.primary)
+                                                        .foregroundStyle(Color.secondary)
                                                     Text("\(data.reps)")
                                                         .foregroundStyle(Color.primary)
                                                 }
