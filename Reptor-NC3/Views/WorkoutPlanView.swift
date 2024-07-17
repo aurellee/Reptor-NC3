@@ -73,6 +73,10 @@ struct WorkoutPlanView: View {
                 
                 // Category
                 HStack(spacing: 10){
+                    Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
+                        Text("1").tag(1)
+                        /*@START_MENU_TOKEN@*/Text("2").tag(2)/*@END_MENU_TOKEN@*/
+                    }.pickerStyle(.segmented)
                     Text("Strength")
                         .foregroundStyle(isStrengthTapped ? Color.primary : Color.secondary)
                         .padding(.vertical, 7)
@@ -169,8 +173,23 @@ struct WorkoutPlanView: View {
                 Spacer()
             }
             if showPopup {
-                Image("savePopup")
-                .opacity(0.8)
+//                Image("savePopup")
+//                .opacity(0.8)
+                ZStack{
+                    Rectangle()
+                        .foregroundStyle(Color.secondaryBackground)
+                        .frame(width: 155, height: 157)
+                        .cornerRadius(8)
+                    VStack {
+                        Image(systemName: "checkmark.circle")
+                            .resizable()
+                            .frame(width: 72, height: 72)
+                            .foregroundStyle(Color.greenPopup)
+                            .padding(.bottom, 12)
+                        Text("Workout Plan")
+                    }
+                }
+                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             }
         }
     }
