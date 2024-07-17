@@ -80,8 +80,7 @@ struct WorkoutPlanView: View {
                         Text("Endurance").tag(2)
                     }
                     .pickerStyle(.segmented)
-                    .padding(.trailing, 20)
-                    .padding(.leading,20)
+                    .padding(.horizontal)
                     
                 }
                 .padding(.bottom)

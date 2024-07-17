@@ -93,7 +93,8 @@ struct HistoryView: View {
                     .ignoresSafeArea(.all)
                 
                 ScrollView {
-                    VStack {
+                    VStack (spacing: 16) {
+                        Spacer().frame(height: 10)
                         ForEach(rmData) { data in
                             NavigationLink(
                                 destination: ExerciseDetailView(exercise: data.exercise))
@@ -101,7 +102,7 @@ struct HistoryView: View {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 25)
                                         .foregroundStyle(Color.listFill)
-                                        .frame(width: 337, height: 143)
+                                        .frame(width: 358, height: 143)
                                     
                                     HStack {
                                         VStack(alignment: .leading) {
