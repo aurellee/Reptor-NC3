@@ -71,11 +71,23 @@ struct WorkoutPlanView: View {
             // Category
             HStack(spacing: 10){
                 Text("Strength")
-                    .foregroundStyle(isStrengthTapped ? Color.boldRed : Color.secondary)
+                    .foregroundStyle(isStrengthTapped ? Color.primary : Color.secondary)
                     .padding(.vertical, 7)
                     .padding(.horizontal, 14)
-                    .background(isStrengthTapped ? Color.lightRed : Color.secondaryBackground)
-                    .cornerRadius(19)
+//                    .background(isStrengthTapped ? Color.blackWhite : Color.secondaryBackground)
+                    .background(isStrengthTapped ?
+                            Rectangle()
+                        .foregroundStyle(Color.blackWhite)
+                        .frame(width: 90, height: 30)
+                        .cornerRadius(6.5)
+                        .shadow(radius: isStrengthTapped ? 3 : 0)
+                                :
+                            Rectangle()
+                        .foregroundStyle(Color.secondaryBackground)
+                        .frame(width: 90, height: 30)
+                        .cornerRadius(6.5)
+                        .shadow(radius: isStrengthTapped ? 3 : 0))
+                    .cornerRadius(6.5)
                     .onTapGesture {
                         isAllTapped = false
                         isStrengthTapped = true
@@ -84,11 +96,23 @@ struct WorkoutPlanView: View {
                     }
 //                        .padding(.leading, 16)
                 Text("Muscle Growth")
-                    .foregroundStyle(isHypertrophyTapped ? Color.boldRed : Color.secondary)
+                    .foregroundStyle(isHypertrophyTapped ? Color.primary : Color.secondary)
                     .padding(.vertical, 7)
                     .padding(.horizontal, 14)
-                    .background(isHypertrophyTapped ? Color.lightRed : Color.secondaryBackground)
-                    .cornerRadius(19)
+//                    .background(isHypertrophyTapped ? Color.blackWhite : Color.secondaryBackground)
+                    .background(isHypertrophyTapped ?
+                            Rectangle()
+                        .foregroundStyle(Color.blackWhite)
+                        .frame(width: 130, height: 30)
+                        .cornerRadius(6.5)
+                        .shadow(radius: isHypertrophyTapped ? 3 : 0)
+                                :
+                            Rectangle()
+                        .foregroundStyle(Color.secondaryBackground)
+                        .frame(width: 130, height: 30)
+                        .cornerRadius(6.5)
+                        .shadow(radius: isHypertrophyTapped ? 3 : 0))
+                    .cornerRadius(6.5)
                     .onTapGesture {
                         isAllTapped = false
                         isStrengthTapped = false
@@ -96,11 +120,23 @@ struct WorkoutPlanView: View {
                         isEnduranceTapped = false
                     }
                 Text("Endurance")
-                    .foregroundStyle(isEnduranceTapped ? Color.boldRed : Color.secondary)
+                    .foregroundStyle(isEnduranceTapped ? Color.primary : Color.secondary)
                     .padding(.vertical, 7)
                     .padding(.horizontal, 14)
-                    .background(isEnduranceTapped ? Color.lightRed : Color.secondaryBackground)
-                    .cornerRadius(19)
+//                    .background(isEnduranceTapped ? Color.blackWhite : Color.secondaryBackground)
+                    .background(isEnduranceTapped ?
+                            Rectangle()
+                        .foregroundStyle(Color.blackWhite)
+                        .frame(width: 100, height: 30)
+                        .cornerRadius(6.5)
+                        .shadow(radius: isEnduranceTapped ? 3 : 0)
+                                :
+                            Rectangle()
+                        .foregroundStyle(Color.secondaryBackground)
+                        .frame(width: 100, height: 30)
+                        .cornerRadius(6.5)
+                        .shadow(radius: isEnduranceTapped ? 3 : 0))
+                    .cornerRadius(6.5)
                     .onTapGesture {
                         isAllTapped = false
                         isStrengthTapped = false
@@ -108,6 +144,11 @@ struct WorkoutPlanView: View {
                         isEnduranceTapped = true
                     }
             }
+            .background(
+                Rectangle()
+                    .cornerRadius(8)
+                    .foregroundStyle(Color.secondaryBackground)
+            )
             .padding(.bottom)
             
             // Plan View
