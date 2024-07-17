@@ -19,59 +19,44 @@ struct WorkoutPlanView: View {
     var body: some View {
         VStack {
             // Category
-            ScrollView(.horizontal){
-                HStack(spacing: 10){
-                    Text("All")
-                        .foregroundStyle(isAllTapped ? Color.boldRed : Color.secondary)
-                        .padding(.vertical, 7)
-                        .padding(.horizontal, 14)
-                        .background(isAllTapped ? Color.lightRed : Color.secondaryBackground)
-                        .cornerRadius(19)
-                        .onTapGesture {
-                            isAllTapped = true
-                            isStrengthTapped = false
-                            isHypertrophyTapped = false
-                            isEnduranceTapped = false
-                        }
-                        .padding(.leading, 16)
-                    Text("Strength")
-                        .foregroundStyle(isStrengthTapped ? Color.boldRed : Color.secondary)
-                        .padding(.vertical, 7)
-                        .padding(.horizontal, 14)
-                        .background(isStrengthTapped ? Color.lightRed : Color.secondaryBackground)
-                        .cornerRadius(19)
-                        .onTapGesture {
-                            isAllTapped = false
-                            isStrengthTapped = true
-                            isHypertrophyTapped = false
-                            isEnduranceTapped = false
-                        }
-                    Text("Hypertrophy")
-                        .foregroundStyle(isHypertrophyTapped ? Color.boldRed : Color.secondary)
-                        .padding(.vertical, 7)
-                        .padding(.horizontal, 14)
-                        .background(isHypertrophyTapped ? Color.lightRed : Color.secondaryBackground)
-                        .cornerRadius(19)
-                        .onTapGesture {
-                            isAllTapped = false
-                            isStrengthTapped = false
-                            isHypertrophyTapped = true
-                            isEnduranceTapped = false
-                        }
-                    Text("Endurance")
-                        .foregroundStyle(isEnduranceTapped ? Color.boldRed : Color.secondary)
-                        .padding(.vertical, 7)
-                        .padding(.horizontal, 14)
-                        .background(isEnduranceTapped ? Color.lightRed : Color.secondaryBackground)
-                        .cornerRadius(19)
-                        .onTapGesture {
-                            isAllTapped = false
-                            isStrengthTapped = false
-                            isHypertrophyTapped = false
-                            isEnduranceTapped = true
-                        }
-                        .padding(.trailing, 16)
-                }
+            HStack(spacing: 10){
+                Text("Strength")
+                    .foregroundStyle(isStrengthTapped ? Color.boldRed : Color.secondary)
+                    .padding(.vertical, 7)
+                    .padding(.horizontal, 14)
+                    .background(isStrengthTapped ? Color.lightRed : Color.secondaryBackground)
+                    .cornerRadius(19)
+                    .onTapGesture {
+                        isAllTapped = false
+                        isStrengthTapped = true
+                        isHypertrophyTapped = false
+                        isEnduranceTapped = false
+                    }
+//                        .padding(.leading, 16)
+                Text("Muscle Growth")
+                    .foregroundStyle(isHypertrophyTapped ? Color.boldRed : Color.secondary)
+                    .padding(.vertical, 7)
+                    .padding(.horizontal, 14)
+                    .background(isHypertrophyTapped ? Color.lightRed : Color.secondaryBackground)
+                    .cornerRadius(19)
+                    .onTapGesture {
+                        isAllTapped = false
+                        isStrengthTapped = false
+                        isHypertrophyTapped = true
+                        isEnduranceTapped = false
+                    }
+                Text("Endurance")
+                    .foregroundStyle(isEnduranceTapped ? Color.boldRed : Color.secondary)
+                    .padding(.vertical, 7)
+                    .padding(.horizontal, 14)
+                    .background(isEnduranceTapped ? Color.lightRed : Color.secondaryBackground)
+                    .cornerRadius(19)
+                    .onTapGesture {
+                        isAllTapped = false
+                        isStrengthTapped = false
+                        isHypertrophyTapped = false
+                        isEnduranceTapped = true
+                    }
             }
             .padding(.bottom)
             VStack{
