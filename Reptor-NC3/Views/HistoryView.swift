@@ -6,22 +6,67 @@
 //    @Environment(\.modelContext) var modelContext
 //    @Query(sort: [SortDescriptor(\RMData.date, order: .reverse), SortDescriptor(\RMData.exercise, order: .forward)]) var rmData: [RMData]
 //    
+//    init() {
+//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.boldRed]
+//    }
+//    
 //    var body: some View {
 //        NavigationStack {
 //            VStack {
-//                List{
 //                    ForEach(rmData) { data in
 //                        NavigationLink(
 //                            destination: ExerciseDetailView(exercise: data.exercise))
 //                        {
-//                            VStack(alignment: .leading) {
-//                                Text("Exercise: \(data.exercise)")
-//                                Text("Weight: \(data.weight) kg")
-//                                Text("Reps: \(data.reps)")
-//                                Text("1RM: \(data.oneRepMax) kg")
-//                                Text("Date: \(data.date)")
+//                            ZStack {
+//                                RoundedRectangle(cornerRadius: 25)
+//                                    .foregroundStyle(Color.blackWhite)
+//                                    .frame(width: 337, height: 143)
+//                                
+//                                HStack {
+//                                    VStack(alignment: .leading) {
+//                                        Text("\(data.exercise)")
+//                                            .foregroundStyle(Color.primary)
+//                                            .fontWeight(.regular)
+//                                        
+//                                        Spacer()
+//                                        
+//                                        Text("\(data.oneRepMax) kg")
+//                                            .foregroundStyle(Color.primary)
+//                                            .fontWeight(.bold)
+//                                            .font(.system(size: 34))
+//                                    }
+//                                    .padding(.vertical, 25)
+//                                    
+//                                    Spacer()
+//                                    
+//                                    VStack(alignment: .trailing) {
+//                                        Text("\(data.date)")
+//                                            .foregroundStyle(Color.primary)
+//                                        
+//                                        Spacer()
+//                                        
+//                                        HStack {
+//                                            VStack {
+//                                                Text("Weight")
+//                                                    .foregroundStyle(Color.primary)
+//                                                Text("\(data.weight)")
+//                                                    .foregroundStyle(Color.primary)
+//                                            }
+//                                            
+//                                            VStack {
+//                                                Text("Rep")
+//                                                    .foregroundStyle(Color.primary)
+//                                                Text("\(data.reps)")
+//                                                    .foregroundStyle(Color.primary)
+//                                            }
+//                                        }
+//                                    }
+//                                    .padding(.vertical, 29)
+//                                }
+//                                .padding(.horizontal, 22)
+//                                
 //                            }
-//                            .padding()
+//                            .padding(.horizontal, 28)
 //                        }
 //                    }
 //                    .onDelete(perform: { indexes in
@@ -30,7 +75,6 @@
 //                        }
 //                    })
 //                }
-//            }
 //            .navigationBarTitle("Saved Plans")
 //        }
 //    }
