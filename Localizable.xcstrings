@@ -211,6 +211,7 @@
 
     },
     "My Workout Plans" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
