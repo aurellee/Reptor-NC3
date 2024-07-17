@@ -18,6 +18,51 @@ struct WorkoutPlanView: View {
     
     var body: some View {
         VStack {
+            // 1RM Details
+            HStack {
+                Text("1RM")
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                    .padding(.leading, 15)
+                Spacer()
+            }
+            
+            HStack {
+                Text("140")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding(.leading, 15)
+                Text("kg")
+                    .fontWeight(.semibold)
+                    .padding(.top, 10)
+                Spacer()
+            }
+            
+            HStack {
+                Text("Bench Press")
+                    .foregroundStyle(Color.secondary)
+                    .padding(.leading, 15)
+                Spacer()
+            }
+            .padding(.bottom, 12)
+            
+            HStack {
+                Text("Show More Weight Distribution Data")
+                    .font(.caption)
+                    .foregroundStyle(Color.blue)
+                    .padding(.leading, 15)
+                Spacer()
+            }
+            .padding(.bottom, 48)
+            
+            HStack {
+                Text("Focus")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.semibold)
+                    .padding(.leading, 15)
+                Spacer()
+            }
+            
             // Category
             HStack(spacing: 10){
                 Text("Strength")
