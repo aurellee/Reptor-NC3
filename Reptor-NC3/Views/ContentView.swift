@@ -6,14 +6,14 @@ struct ContentView: View {
         TabView {
             CalculatorView()
                 .tabItem {
-                    Image(systemName: "star.fill")
+                    Image(systemName: "dumbbell")
                     Text("Calculator")
                 }
             
             HistoryView()
                 .tabItem {
-                    Image(systemName: "clock.arrow.circlepath")
-                    Text("History")
+                    Image(systemName: "list.bullet.rectangle.portrait.fill")
+                    Text("Saved Plans")
                 }
         }
         .accentColor(Color.boldRed)
