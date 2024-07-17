@@ -1,8 +1,8 @@
-//
-//  ExerciseDetailView.swift
-//  Reptor-NC3
-//
-//  Created by Balya Elfata on 16/07/24.
-//
+import SwiftUI
+import SwiftData
 
-import Foundation
+struct ExerciseDetailView: View {
+    var body: some View {
+        Text("Hello World")
+    }
+}
