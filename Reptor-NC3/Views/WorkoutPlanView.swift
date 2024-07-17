@@ -55,6 +55,7 @@ struct WorkoutPlanView: View {
                         showWeightDistribution.toggle()
                     }
                     .font(.caption)
+                    .foregroundStyle(Color.blue)
                     .padding(.leading, 15)
                     .sheet(isPresented: $showWeightDistribution) {
                         WeightDistributionView(oneRepMax: oneRepMax)
