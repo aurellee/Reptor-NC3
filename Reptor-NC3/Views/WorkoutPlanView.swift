@@ -85,32 +85,7 @@ struct WorkoutPlanView: View {
                     EndurancePlanView(oneRepMax: oneRepMax)
                 }
                 else {
-                    // Estimated Rep Maxes
-                    HStack{
-                        Text("Estimated Rep Maxes")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            .padding(.leading, 15)
-                        Spacer()
-                    }
-                    
-                    // Workout Plan Sheet
-                    List {
-                        ForEach(1..<13) { item in
-                            HStack(){
-                                Text("\(item) reps")
-                                    .padding(.leading)
-                                Spacer()
-                                Text("\(144 - item*4) kg")
-                                Spacer()
-                                Text("\(103 - item*3)%")
-                                    .padding(.trailing)
-                            }
-                            .listRowInsets(EdgeInsets())
-                        }
-                    }
-                    .listStyle(.plain)
-                    .padding(.horizontal)
+                    StrengthPlanView(oneRepMax: oneRepMax)
                 }
             }
             Spacer()
