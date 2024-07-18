@@ -3,24 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		219B6DD72C43E27000D78148 /* WorkoutPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DD62C43E27000D78148 /* WorkoutPlanView.swift */; };
+		219B6DD92C4433F200D78148 /* StrengthPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DD82C4433F200D78148 /* StrengthPlanView.swift */; };
+		219B6DDB2C44341000D78148 /* HypertrophyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */; };
+		219B6DDD2C44342100D78148 /* EndurancePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DDC2C44342100D78148 /* EndurancePlanView.swift */; };
+		219B6DE12C4502C500D78148 /* WorkoutPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DE02C4502C500D78148 /* WorkoutPlanViewModel.swift */; };
+		219B6DEF2C46113500D78148 /* RMData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DEE2C46113500D78148 /* RMData.swift */; };
+		219B6DF12C4650BB00D78148 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 219B6DF02C4650BB00D78148 /* Localizable.xcstrings */; };
+		219B6DF42C46C05700D78148 /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DF32C46C05700D78148 /* ExerciseDetailView.swift */; };
+		219B6DF62C4764A700D78148 /* WeightDistributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DF52C4764A700D78148 /* WeightDistributionView.swift */; };
+		219B6DF82C47BF9A00D78148 /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DF72C47BF9A00D78148 /* HideKeyboard.swift */; };
+		219B6DFA2C482E4700D78148 /* SavedPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B6DF92C482E4700D78148 /* SavedPlanViewModel.swift */; };
+		21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F1952D2C416204009BDF5E /* RMCalculator.swift */; };
+		8112A9BE2C416E1F0021EC20 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9BD2C416E1F0021EC20 /* Color+Extension.swift */; };
+		8112A9C02C4401220021EC20 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9BF2C4401220021EC20 /* CalculatorView.swift */; };
+		8112A9C22C4401A60021EC20 /* SavedPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112A9C12C4401A60021EC20 /* SavedPlanView.swift */; };
 		81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */; };
-		81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A42C3FE4750060A23E /* ContentView.swift */; };
+		81A7B6A52C3FE4750060A23E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7B6A42C3FE4750060A23E /* TabBarView.swift */; };
 		81A7B6A72C3FE4760060A23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A7B6A62C3FE4760060A23E /* Assets.xcassets */; };
-		81A7B6AA2C3FE4760060A23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A7B6A92C3FE4760060A23E /* Preview Assets.xcassets */; };
-		9AAF45AD2C41278F00B0110E /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF45AC2C41278F00B0110E /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		81A7B69F2C3FE4740060A23E /* Reptor-NC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reptor-NC3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		219B6DD62C43E27000D78148 /* WorkoutPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanView.swift; sourceTree = "<group>"; };
+		219B6DD82C4433F200D78148 /* StrengthPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthPlanView.swift; sourceTree = "<group>"; };
+		219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypertrophyPlanView.swift; sourceTree = "<group>"; };
+		219B6DDC2C44342100D78148 /* EndurancePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndurancePlanView.swift; sourceTree = "<group>"; };
+		219B6DE02C4502C500D78148 /* WorkoutPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanViewModel.swift; sourceTree = "<group>"; };
+		219B6DEE2C46113500D78148 /* RMData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMData.swift; sourceTree = "<group>"; };
+		219B6DF02C4650BB00D78148 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		219B6DF32C46C05700D78148 /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
+		219B6DF52C4764A700D78148 /* WeightDistributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightDistributionView.swift; sourceTree = "<group>"; };
+		219B6DF72C47BF9A00D78148 /* HideKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
+		219B6DF92C482E4700D78148 /* SavedPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlanViewModel.swift; sourceTree = "<group>"; };
+		21F1952D2C416204009BDF5E /* RMCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCalculator.swift; sourceTree = "<group>"; };
+		8112A9BD2C416E1F0021EC20 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		8112A9BF2C4401220021EC20 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		8112A9C12C4401A60021EC20 /* SavedPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlanView.swift; sourceTree = "<group>"; };
+		817304622C47EADA001971F3 /* Reptor-NC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reptor-NC3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reptor_NC3App.swift; sourceTree = "<group>"; };
-		81A7B6A42C3FE4750060A23E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81A7B6A42C3FE4750060A23E /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		81A7B6A62C3FE4760060A23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81A7B6A92C3FE4760060A23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9AAF45AC2C41278F00B0110E /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,28 +61,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		219B6DD32C4162C100D78148 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */,
+				81A7B6A42C3FE4750060A23E /* TabBarView.swift */,
+				8112A9BF2C4401220021EC20 /* CalculatorView.swift */,
+				219B6DD62C43E27000D78148 /* WorkoutPlanView.swift */,
+				219B6DF52C4764A700D78148 /* WeightDistributionView.swift */,
+				219B6DD82C4433F200D78148 /* StrengthPlanView.swift */,
+				219B6DDA2C44341000D78148 /* HypertrophyPlanView.swift */,
+				219B6DDC2C44342100D78148 /* EndurancePlanView.swift */,
+				8112A9C12C4401A60021EC20 /* SavedPlanView.swift */,
+				219B6DF32C46C05700D78148 /* ExerciseDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		219B6DD42C4162CF00D78148 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				219B6DEE2C46113500D78148 /* RMData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		219B6DD52C4162D300D78148 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				21F1952D2C416204009BDF5E /* RMCalculator.swift */,
+				219B6DE02C4502C500D78148 /* WorkoutPlanViewModel.swift */,
+				219B6DF92C482E4700D78148 /* SavedPlanViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		814E33DA2C4673A100FCAC0D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				219B6DF72C47BF9A00D78148 /* HideKeyboard.swift */,
+				8112A9BD2C416E1F0021EC20 /* Color+Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		81A7B6962C3FE4740060A23E = {
 			isa = PBXGroup;
 			children = (
 				81A7B6A12C3FE4740060A23E /* Reptor-NC3 */,
-				81A7B6A02C3FE4740060A23E /* Products */,
+				219B6DF02C4650BB00D78148 /* Localizable.xcstrings */,
+				817304622C47EADA001971F3 /* Reptor-NC3.app */,
 			);
-			sourceTree = "<group>";
-		};
-		81A7B6A02C3FE4740060A23E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				81A7B69F2C3FE4740060A23E /* Reptor-NC3.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		81A7B6A12C3FE4740060A23E /* Reptor-NC3 */ = {
 			isa = PBXGroup;
 			children = (
-				81A7B6A22C3FE4740060A23E /* Reptor_NC3App.swift */,
-				81A7B6A42C3FE4750060A23E /* ContentView.swift */,
-				9AAF45AC2C41278F00B0110E /* History.swift */,
+				219B6DD32C4162C100D78148 /* Views */,
+				219B6DD42C4162CF00D78148 /* Models */,
+				219B6DD52C4162D300D78148 /* ViewModels */,
+				814E33DA2C4673A100FCAC0D /* Helper */,
 				81A7B6A62C3FE4760060A23E /* Assets.xcassets */,
 				81A7B6A82C3FE4760060A23E /* Preview Content */,
 			);
@@ -87,7 +152,7 @@
 			);
 			name = "Reptor-NC3";
 			productName = "Reptor-NC3";
-			productReference = 81A7B69F2C3FE4740060A23E /* Reptor-NC3.app */;
+			productReference = 817304622C47EADA001971F3 /* Reptor-NC3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,15 +171,16 @@
 				};
 			};
 			buildConfigurationList = 81A7B69A2C3FE4740060A23E /* Build configuration list for PBXProject "Reptor-NC3" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = 81A7B6962C3FE4740060A23E;
-			productRefGroup = 81A7B6A02C3FE4740060A23E /* Products */;
+			productRefGroup = 81A7B6962C3FE4740060A23E;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -128,8 +194,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81A7B6AA2C3FE4760060A23E /* Preview Assets.xcassets in Resources */,
 				81A7B6A72C3FE4760060A23E /* Assets.xcassets in Resources */,
+				219B6DF12C4650BB00D78148 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +206,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AAF45AD2C41278F00B0110E /* History.swift in Sources */,
-				81A7B6A52C3FE4750060A23E /* ContentView.swift in Sources */,
+				219B6DDD2C44342100D78148 /* EndurancePlanView.swift in Sources */,
+				219B6DDB2C44341000D78148 /* HypertrophyPlanView.swift in Sources */,
+				8112A9C22C4401A60021EC20 /* SavedPlanView.swift in Sources */,
+				219B6DF42C46C05700D78148 /* ExerciseDetailView.swift in Sources */,
+				8112A9C02C4401220021EC20 /* CalculatorView.swift in Sources */,
+				219B6DD72C43E27000D78148 /* WorkoutPlanView.swift in Sources */,
+				219B6DEF2C46113500D78148 /* RMData.swift in Sources */,
+				81A7B6A52C3FE4750060A23E /* TabBarView.swift in Sources */,
 				81A7B6A32C3FE4740060A23E /* Reptor_NC3App.swift in Sources */,
+				21F1952E2C416204009BDF5E /* RMCalculator.swift in Sources */,
+				219B6DF82C47BF9A00D78148 /* HideKeyboard.swift in Sources */,
+				8112A9BE2C416E1F0021EC20 /* Color+Extension.swift in Sources */,
+				219B6DE12C4502C500D78148 /* WorkoutPlanViewModel.swift in Sources */,
+				219B6DFA2C482E4700D78148 /* SavedPlanViewModel.swift in Sources */,
+				219B6DF62C4764A700D78148 /* WeightDistributionView.swift in Sources */,
+				219B6DD92C4433F200D78148 /* StrengthPlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,24 +352,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Reptor-NC3/Preview Content\"";
-				DEVELOPMENT_TEAM = XZYAP8RMAS;
+				DEVELOPMENT_TEAM = H3779UJ6B2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Reptor;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Lele.Reptor-NC3";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.balya.reptor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,24 +383,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Reptor-NC3/Preview Content\"";
-				DEVELOPMENT_TEAM = XZYAP8RMAS;
+				DEVELOPMENT_TEAM = H3779UJ6B2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Reptor;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Lele.Reptor-NC3";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.balya.reptor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
