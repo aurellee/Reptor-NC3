@@ -79,13 +79,15 @@ struct CalculatorView: View {
                     HStack {
                         Text("Exercise")
                         Spacer()
-                        Picker(selection: $viewModel.exercise, label: Text(viewModel.exercise).foregroundColor(.red)) {
+                        Picker(selection: $viewModel.exercise, label: Text(viewModel.exercise).foregroundStyle(Color.secondary)) {
                             ForEach(viewModel.exerciseTypes, id: \.self) { exercise in
                                 Text(exercise).tag(exercise)
-                                    .foregroundColor(.red)
+                                    .foregroundStyle(Color.secondary)
                             }
                         }
+                        .accentColor(.secondary)
                         .pickerStyle(MenuPickerStyle())
+
                     }
                     .padding()
                     .frame(width: 361, height: 44)
