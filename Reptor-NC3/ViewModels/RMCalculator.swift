@@ -32,7 +32,7 @@ class RMCalculator: ObservableObject {
     }
     
     private func calculateOneRepMax(weight: String, reps: String, exercise: String) {
-        guard let weight = Double(weight), let reps = Double(reps), exercise != "None" else {
+        guard let weight = Double(weight), let reps = Double(reps) else {
             oneRepMax = "0"
             return
         }
