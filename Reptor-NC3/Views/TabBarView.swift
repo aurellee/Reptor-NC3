@@ -1,19 +1,19 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct TabBarView: View {
     var body: some View {
         TabView {
             CalculatorView()
                 .tabItem {
-                    Image(systemName: "star.fill")
+                    Image(systemName: "dumbbell")
                     Text("Calculator")
                 }
             
-            HistoryView()
+            SavedPlanView()
                 .tabItem {
-                    Image(systemName: "clock.arrow.circlepath")
-                    Text("History")
+                    Image(systemName: "list.bullet.rectangle.portrait.fill")
+                    Text("Saved Plans")
                 }
         }
         .accentColor(Color.boldRed)
@@ -24,6 +24,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    TabBarView()
         .modelContainer(for: RMData.self)
 }

@@ -1,11 +1,35 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
     "%@" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%@ kg" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ kg"
+          }
+        }
+      }
     },
     "%@-%@ kg" : {
       "localizations" : {
@@ -14,14 +38,34 @@
             "state" : "new",
             "value" : "%1$@-%2$@ kg"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@-%2$@ kg"
+          }
         }
       }
     },
     "%lld reps" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld perulangan"
+          }
+        }
+      }
     },
     "%lld%%" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
+          }
+        }
+      }
     },
     "1-2 minutes between sets" : {
       "localizations" : {
@@ -34,10 +78,14 @@
       }
     },
     "1RM" : {
-
-    },
-    "1RM: %@ kg" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1RM"
+          }
+        }
+      }
     },
     "2-3 minutes between sets" : {
       "localizations" : {
@@ -50,10 +98,24 @@
       }
     },
     "2-3 sets" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2-3 set"
+          }
+        }
+      }
     },
     "3-4 sets" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3-4 set"
+          }
+        }
+      }
     },
     "3-5 reps" : {
       "localizations" : {
@@ -66,7 +128,14 @@
       }
     },
     "4-6 sets" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4-6 set"
+          }
+        }
+      }
     },
     "8-12 reps" : {
       "localizations" : {
@@ -149,9 +218,6 @@
         }
       }
     },
-    "Date: %@" : {
-
-    },
     "Endurance" : {
       "localizations" : {
         "id" : {
@@ -183,6 +249,7 @@
       }
     },
     "Exercise: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -193,9 +260,17 @@
       }
     },
     "Focus" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fokus"
+          }
+        }
+      }
     },
     "History" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -206,10 +281,35 @@
       }
     },
     "kg" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kg"
+          }
+        }
+      }
     },
     "Muscle Growth" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perkembangan Otot"
+          }
+        }
+      }
+    },
+    "My Workout Plans" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rencana Latihan Saya"
+          }
+        }
+      }
     },
     "Recommended Reps" : {
       "localizations" : {
@@ -252,13 +352,24 @@
       }
     },
     "Rep" : {
-
-    },
-    "Reps: %@" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perulangan"
+          }
+        }
+      }
     },
     "Save" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
+          }
+        }
+      }
     },
     "Save History" : {
       "extractionState" : "stale",
@@ -272,20 +383,34 @@
       }
     },
     "Saved Plans" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rencana Tersimpen"
+          }
+        }
+      }
     },
     "See Workout Plan" : {
       "localizations" : {
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lihat Rencana Pelatihan"
+            "value" : "Lihat Rencana Latihan"
           }
         }
       }
     },
     "Show More Weight Distribution Data" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tunjukkan Data Distribusi Beban"
+          }
+        }
+      }
     },
     "Strength" : {
       "localizations" : {
@@ -308,9 +433,17 @@
       }
     },
     "Weight Distribution" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Distribusi Beban"
+          }
+        }
+      }
     },
     "Weight: %@ kg" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {
@@ -321,7 +454,6 @@
       }
     },
     "Workout Plan" : {
-      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

@@ -3,7 +3,6 @@ import SwiftData
 
 struct WorkoutPlanView: View {
     @Environment(\.modelContext) var modelContext
-    @StateObject private var workoutPlanViewModel = WorkoutPlanViewModel()
     
     let exercise: String
     let weight: String
@@ -12,10 +11,7 @@ struct WorkoutPlanView: View {
     let date: String
     
     @State var showWeightDistribution = false
-    @State var isAllTapped = true
-    @State var isStrengthTapped = true
-    @State var isHypertrophyTapped = false
-    @State var isEnduranceTapped = false
+    @State var workoutFocus = 0
     
     @Binding var showPopup: Bool
     
@@ -59,6 +55,7 @@ struct WorkoutPlanView: View {
                     .padding(.leading, 15)
                     .sheet(isPresented: $showWeightDistribution) {
                         WeightDistributionView(oneRepMax: oneRepMax)
+                            .presentationDragIndicator(.visible)
                     }
                     Spacer()
                 }
@@ -74,96 +71,26 @@ struct WorkoutPlanView: View {
                 
                 // Category
                 HStack(spacing: 10){
-                    Text("Strength")
-                        .foregroundStyle(isStrengthTapped ? Color.primary : Color.secondary)
-                        .padding(.vertical, 7)
-                        .padding(.horizontal, 14)
-    //                    .background(isStrengthTapped ? Color.blackWhite : Color.secondaryBackground)
-                        .background(isStrengthTapped ?
-                                Rectangle()
-                            .foregroundStyle(Color.blackWhite)
-                            .frame(width: 90, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isStrengthTapped ? 3 : 0)
-                                    :
-                                Rectangle()
-                            .foregroundStyle(Color.secondaryBackground)
-                            .frame(width: 90, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isStrengthTapped ? 3 : 0))
-                        .cornerRadius(6.5)
-                        .onTapGesture {
-                            isAllTapped = false
-                            isStrengthTapped = true
-                            isHypertrophyTapped = false
-                            isEnduranceTapped = false
-                        }
-    //                        .padding(.leading, 16)
-                    Text("Muscle Growth")
-                        .foregroundStyle(isHypertrophyTapped ? Color.primary : Color.secondary)
-                        .padding(.vertical, 7)
-                        .padding(.horizontal, 14)
-    //                    .background(isHypertrophyTapped ? Color.blackWhite : Color.secondaryBackground)
-                        .background(isHypertrophyTapped ?
-                                Rectangle()
-                            .foregroundStyle(Color.blackWhite)
-                            .frame(width: 130, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isHypertrophyTapped ? 3 : 0)
-                                    :
-                                Rectangle()
-                            .foregroundStyle(Color.secondaryBackground)
-                            .frame(width: 130, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isHypertrophyTapped ? 3 : 0))
-                        .cornerRadius(6.5)
-                        .onTapGesture {
-                            isAllTapped = false
-                            isStrengthTapped = false
-                            isHypertrophyTapped = true
-                            isEnduranceTapped = false
-                        }
-                    Text("Endurance")
-                        .foregroundStyle(isEnduranceTapped ? Color.primary : Color.secondary)
-                        .padding(.vertical, 7)
-                        .padding(.horizontal, 14)
-    //                    .background(isEnduranceTapped ? Color.blackWhite : Color.secondaryBackground)
-                        .background(isEnduranceTapped ?
-                                Rectangle()
-                            .foregroundStyle(Color.blackWhite)
-                            .frame(width: 100, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isEnduranceTapped ? 3 : 0)
-                                    :
-                                Rectangle()
-                            .foregroundStyle(Color.secondaryBackground)
-                            .frame(width: 100, height: 30)
-                            .cornerRadius(6.5)
-                            .shadow(radius: isEnduranceTapped ? 3 : 0))
-                        .cornerRadius(6.5)
-                        .onTapGesture {
-                            isAllTapped = false
-                            isStrengthTapped = false
-                            isHypertrophyTapped = false
-                            isEnduranceTapped = true
-                        }
+                    Picker("", selection: $workoutFocus) {
+                        Text("Strength").tag(0)
+                        Text("Muscle Growth").tag(1)
+                        Text("Endurance").tag(2)
+                    }
+                    .pickerStyle(.segmented)
+                    .padding(.horizontal)
+                    
                 }
-                .background(
-                    Rectangle()
-                        .cornerRadius(8)
-                        .foregroundStyle(Color.secondaryBackground)
-                )
                 .padding(.bottom)
                 
                 // Plan View
                 VStack{
-                    if isStrengthTapped {
+                    if workoutFocus == 0 {
                         StrengthPlanView(oneRepMax: oneRepMax)
                     }
-                    else if isHypertrophyTapped {
+                    else if workoutFocus == 1 {
                         HypertrophyPlanView(oneRepMax: oneRepMax)
                     }
-                    else if isEnduranceTapped {
+                    else if workoutFocus == 2 {
                         EndurancePlanView(oneRepMax: oneRepMax)
                     }
                     else {
@@ -173,17 +100,25 @@ struct WorkoutPlanView: View {
                 Spacer()
             }
             if showPopup {
-                Image("savePopup")
-                .opacity(0.8)
+//                Image("savePopup")
+//                .opacity(0.8)
+                ZStack{
+                    Rectangle()
+                        .foregroundStyle(Color.secondaryBackground)
+                        .frame(width: 155, height: 157)
+                        .cornerRadius(8)
+                    VStack {
+                        Image(systemName: "checkmark.circle")
+                            .resizable()
+                            .frame(width: 72, height: 72)
+                            .foregroundStyle(Color.greenPopup)
+                            .padding(.bottom, 12)
+                        Text("Workout Plan")
+                    }
+                }
+                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             }
         }
-    }
-    
-    private func formatDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter.string(from: date)
     }
 }
 

@@ -4,7 +4,7 @@ import SwiftUI
 struct Reptor_NC3App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarView()
         }
         .modelContainer(for: RMData.self)
     }
