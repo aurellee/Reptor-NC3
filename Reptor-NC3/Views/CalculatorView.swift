@@ -98,7 +98,7 @@ struct CalculatorView: View {
                     .padding(.bottom, 12)
                     
                     NavigationLink(
-                        destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax, date: date, showPopup: $showPopup)
+                        destination: WorkoutPlanView(exercise: viewModel.exercise, weight: viewModel.weight, reps: viewModel.reps, oneRepMax: viewModel.oneRepMax, date: date, showDate: .constant(false), showPopup: $showPopup)
                             .onAppear{saveDisabled = false}
                             .toolbar(.hidden, for: .tabBar)
                             .toolbar {

@@ -12,6 +12,7 @@ struct WorkoutPlanView: View {
     
     @State var showWeightDistribution = false
     @State var workoutFocus = 0
+    @Binding var showDate: Bool
     
     @Binding var showPopup: Bool
     
@@ -123,5 +124,5 @@ struct WorkoutPlanView: View {
 }
 
 #Preview {
-    WorkoutPlanView(exercise: "Weightlift", weight: "30.0", reps: "30", oneRepMax: "120", date: "17/07/2024", showPopup: .constant(false))
+    WorkoutPlanView(exercise: "Weightlift", weight: "30.0", reps: "30", oneRepMax: "120", date: "17/07/2024", showDate: .constant(false), showPopup: .constant(false))
 }
