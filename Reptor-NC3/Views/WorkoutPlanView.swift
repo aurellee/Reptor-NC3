@@ -26,6 +26,10 @@ struct WorkoutPlanView: View {
                         .foregroundStyle(Color.secondary)
                         .padding(.leading, 15)
                     Spacer()
+                    if showDate {
+                        Text(date)
+                            .padding(.trailing, 15)
+                    }
                 }
                 
                 HStack {
