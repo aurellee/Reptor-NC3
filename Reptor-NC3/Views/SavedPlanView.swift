@@ -46,7 +46,7 @@ struct SavedPlanView: View {
                                         }
                                         .padding(.vertical, 25)
                                         
-                                        Spacer()
+                                        Spacer().frame(maxWidth: 130)
                                         
                                         VStack(alignment: .trailing) {
                                             Text("\(data.date)")
